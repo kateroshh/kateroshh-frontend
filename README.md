@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio site kateroshh.ru 🌌
 
-## Getting Started
+<a id="readme-top"></a>
 
-First, run the development server:
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<br />
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<!-- ABOUT THE PROJECT -->
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## About the project 🚀
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
-## Learn More
+<!-- LINKS -->
 
-To learn more about Next.js, take a look at the following resources:
+## Links 🔗
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[kateroshh.ru](https://kateroshh.ru)
+[figma](https://www.figma.com/design/W17GumeWry89YjVe8dzKdM/kateroshh.ru?node-id=256-9712&t=oSPQvBgcqcowbB37-1)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<!-- CONTACT -->
 
-## Deploy on Vercel
+## Contact Me 📫
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<div id="badges" align="contact">
+    <a href="https://github.com/kateroshh">
+        <img alt="github" src="https://img.shields.io/badge/GITHUB-000" />
+    </a>
+    <a href="kateroshh@gmail.com" target="_blank">
+        <img alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+    </a>
+    <a href="https://t.me/kateroshh">
+        <img alt="Telegram" src="https://img.shields.io/badge/Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white" />
+    </a>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+</div>
+
+## Built With 🛠
+
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,typescript,react,redux,scss,docker,)](https://skillicons.dev)
+
+## Done ✅
+
+- Created Blank template Next.js
+- Configured prettier and eslint
+
+## To do 📝
+
+- [ ] Create site components
