@@ -1,0 +1,49 @@
+@import "./common/";
+
+.page {
+    font-weight: map-get($font-weights, 'regular');
+    background-color: $bg-color;
+    min-height: 100vh;
+    min-width: 320px;
+    font-size: map-get($font-sizes, 'medium');
+    color: map-get($font-colors, 'main');
+}
+
+.container {
+    max-width: $content-with;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header {
+    padding-top: 34px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.header-lng {
+    display: flex;
+    color: map-get($font-colors, 'grey-main');
+
+    &__item {
+        padding: 0 26px 0 0;
+        font-size: map-get($font-sizes, 'small');
+    }
+
+    &__item:last-child {
+        padding: 0 0 0 26px;
+    }
+
+    &__item_active {
+        color: map-get($font-colors, 'main');
+    }
+}
