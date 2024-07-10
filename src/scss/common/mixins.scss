@@ -1,0 +1,19 @@
+
+
+@mixin header-border($direction) {
+    &__btn_#{$direction}::#{$direction} {
+        @extend %header-border;
+
+        @if $direction == "after" {
+            border-radius: 2px 0 0 2px;
+            right: 0px;
+        } @else {
+            border-radius: 0 2px 2px 0;
+            left: 0px;
+        }
+    }
+
+    &__btn_#{$direction}:hover::#{$direction} {
+        color: map-get($font-colors, 'main');
+    }
+}

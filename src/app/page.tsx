@@ -13,8 +13,16 @@ const Home: FC = () => {
           <div className="header__container">
             <Image className="" src={Logo} alt="logo" />
             <ul className="header-lng">
-              <li className="header-lng__item header__item_active">РУС</li>
-              <li className="header-lng__item">ENG</li>
+              <li className="header-lng__item">
+                <button className="header-lng__btn header-lng__btn_after header-lng__btn_active">
+                  РУС
+                </button>
+              </li>
+              <li className="header-lng__item">
+                <button className="header-lng__btn header-lng__btn_before">
+                  ENG
+                </button>
+              </li>
             </ul>
           </div>
         </div>

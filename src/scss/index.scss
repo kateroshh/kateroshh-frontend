@@ -35,6 +35,7 @@
     color: map-get($font-colors, 'grey-main');
 
     &__item {
+        position: relative;
         padding: 0 26px 0 0;
         font-size: map-get($font-sizes, 'small');
     }
@@ -43,7 +44,20 @@
         padding: 0 0 0 26px;
     }
 
-    &__item_active {
+    &__btn_active {
         color: map-get($font-colors, 'main');
     }
+
+    &__btn_active {
+        cursor: default;
+    }
+
+    @include header-border(after);
+    @include header-border(before);
+
+    &__btn:hover {
+        color: map-get($font-colors, 'main');
+    }
+
+
 }
