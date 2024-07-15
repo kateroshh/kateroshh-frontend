@@ -1,21 +1,39 @@
-$content-with: 1382px;
+$content-with: (
+    xxxl: 1382px,
+    xxl: 1140px,
+    xl: 980px,
+    md: 768px, 
+    sm: 390px,
+);
 
-$font-colors: (
+$breakpoint: (
+    xxxl: 1500px,
+    xxl: 1280px,
+    xl: 1024px,
+    md: 768px, 
+    sm: 390px,
+);
+
+$colors: (
     main: #fff,
     grey-main: #b3b2ae,
     grey-menu: #414141,
-    black: #202124,
+    black-main: #202124,
     accent: #fabd04,
+    hover-btn: #dba602,
+    bgr-card: #2b2b2f,
+    bg-color: #202124,
 );
 
-$bg-color: #202124;
-$card-color-hover: #2b2b2f;
-
 $font-sizes: (
+    text-brief: 14px,
+    chip: 12px,
     small: 16px,
     medium: 18px,
     large: 20px,
     title-small: 24px,
+    subtitle-brief: 35px,
+    subtitle: 30px,
     title-medium: 36px,
     title-large: 40px,
 );
@@ -26,3 +44,11 @@ $font-weights: (
     bold: 700,
 );
 
+$line-height: (
+    title-large: 167%, 
+    main: 133%,
+    text: 130%,
+    title-medium: 120%,
+    title-small: 111%,
+    period: 192%,
+)

@@ -1,0 +1,54 @@
+.header {
+    padding-top: 10px;
+    margin: 0 0 47px 0;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-lng {
+        display: flex;
+        color: map-get($colors, 'grey-main');
+        @extend %menu-animation;
+    
+        &__item {
+            position: relative;
+            padding: 0 26px 0 0;
+            font-size: map-get($font-sizes, 'small');
+        }
+    
+        &__item:last-child {
+            padding: 0 0 0 26px;
+        }
+    
+        &__btn_active {
+            color: map-get($colors, 'main');
+            cursor: default;
+        }
+    
+        @include header-border(after);
+        @include header-border(before);
+    
+        &__btn:hover {
+            cursor: pointer;
+            color: map-get($colors, 'main');
+        }
+    }
+}
+
+// Media breackpoints
+
+@include desktop-large {
+    .header {
+        padding-top: 34px;
+        margin: 0 0 115px 0;
+    }
+}
+
+@include laptop {
+    .header {
+        margin: 0 0 24px 0;
+    }
+}

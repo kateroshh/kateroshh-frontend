@@ -1,0 +1,94 @@
+.portfolio-container {
+    margin: 0 0 150px 16px;
+
+    .portfolio {
+        margin-bottom: 132px;
+    
+        &__item{
+            display: flex;
+            margin-bottom: 119px;
+        }
+    
+        &__item:last-child{
+            margin-bottom: 0;
+        }
+    
+        &__period {
+            color: map-get($colors, 'grey-main');
+            max-width: 165px;
+            width: 100%;
+            margin: -5px 56px 0 0;
+            line-height: map-get($line-height, 'period'); 
+        }
+    
+        &__content {
+            max-width: calc(100% - 225px);
+        }
+    
+        &__title {
+            font-weight: map-get($font-weights, 'medium');
+            font-size: map-get($font-sizes, 'large');
+            line-height: map-get($line-height, 'text'); 
+            margin-bottom: 16px;
+        }
+    
+        &__about ~ .chips {
+            margin-top: 19px;
+        }
+    
+        &__text {
+            margin-bottom: 13px;
+        }
+    
+        &__text:last-child {
+            margin-bottom: 0;
+        }
+    
+        &__link {
+            color: map-get($colors, 'main');
+            margin-left: 5px;
+        }
+    
+        .portfolio-list {
+            list-style: '- ';
+            list-style-position: inside;
+    
+            &__item {
+                margin-left: 5px;
+            }
+    
+            &__item:last-child {
+                margin-bottom: 0;
+            }
+            
+        }
+    
+        &__all {
+            margin-left: -15px;
+        } 
+    }
+}
+
+@include laptop {
+    .portfolio-container {
+        margin: 0 0 100px 0;
+        .portfolio {
+            margin-bottom: 100px;
+        
+            &__period {
+                max-width: 120px;
+                margin: 0 20px 0 0;
+                line-height: map-get($line-height, 'main'); 
+            }
+
+            &__item{
+                margin-bottom: 80px;
+            }
+
+            &__content {
+                max-width: calc(100% - 150px);
+            }
+        }
+
+    }
+}

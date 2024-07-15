@@ -1,0 +1,32 @@
+.about-me {
+    margin-bottom: 100px;
+    padding: 0 12px 0 10px;
+
+    &__text {
+        font-size: map-get($font-sizes, 'large');
+        line-height: map-get($line-height, 'text'); 
+        margin-bottom: 17px;
+    }
+
+    &__text:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// Media breackpoints
+
+@include desktop-large {
+    .about-me {
+        margin-bottom: 180px;
+    }
+}
+
+@include laptop {
+    .about-me {
+        padding: 0;
+        
+        &__text {
+            font-size: map-get($font-sizes, 'medium');
+        }
+    }
+}

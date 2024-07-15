@@ -7,7 +7,7 @@
     padding: 0; 
 }
 
-ul[role='list'], ol[role='list']{
+ul[role='list'], ol[role='list'], nav, ul{
     list-style: none; 
 }
 
@@ -17,6 +17,10 @@ html:focus-within{
 
 a:not([class]){
     text-decoration-skip-ink: auto; 
+}
+
+a {
+    text-decoration: none;
 }
 
 img, picture, svg, video, canvas{
@@ -30,6 +34,13 @@ img, picture, svg, video, canvas{
 
 input, button, textarea, select{
     font: inherit; 
+}
+
+button {
+    padding: 0;
+    border: none;
+    color: inherit;
+    background-color: transparent;
 }
 
 @media (prefers-reduced-motion: reduce){
@@ -47,5 +58,6 @@ input, button, textarea, select{
 
 body, html{
     height: 100%; 
+    margin: 0;
     scroll-behavior: smooth; 
 }

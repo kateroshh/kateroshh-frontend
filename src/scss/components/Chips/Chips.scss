@@ -1,0 +1,23 @@
+.chips {
+    display: flex;
+    align-items: center;
+
+    .chips__item {
+        max-width: 100px;
+        width: 100%;
+        font-size: map-get($font-sizes, 'chip');
+        color: map-get($colors, 'accent');
+        padding: 5px 10px;
+        margin-right: 8px;
+        background-color: rgba(map-get($colors, 'accent'), .2);
+        border-radius: 16px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

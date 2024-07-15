@@ -1,0 +1,215 @@
+.brief-info {
+    position: fixed;
+    top: 90px;
+    max-width: 430px;
+    width: 100%;
+
+    &__title {
+        margin-bottom: 16px;
+    }
+    
+    &__subtitle {
+        margin-bottom: 24px;
+        line-height: map-get($line-height, 'title-small'); 
+    }
+    
+    &__text {
+        margin-bottom: 50px;
+        font-size: map-get($font-sizes, 'text-brief');
+        max-width: 400px;
+        width: 100%;
+    }
+    
+    &__btn {
+        margin-bottom: 50px;
+    }
+}
+
+
+.title {
+    font-weight: map-get($font-weights, 'bold');
+    font-size: map-get($font-sizes, 'title-medium');
+    line-height: map-get($line-height, 'title-medium'); 
+}
+
+.subtitle {
+    font-size: map-get($font-sizes, 'large');
+    line-height: map-get($line-height, 'title-small'); 
+}
+
+.download-btn {
+    position: relative;
+    background-color: map-get($colors, 'accent');
+    color: map-get($colors, 'black-main');
+    border-radius: 32px;
+    line-height: map-get($line-height, 'text'); 
+    padding: 12px 33px 12px 64px;
+    font-size: map-get($font-sizes, 'medium');
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 32px;
+        width: 24px;
+        height: 24px;
+        background: url(../../../../public/img/download-icon.svg) center no-repeat;
+    }
+    
+    &:hover {
+        cursor: pointer;
+        background-color: map-get($colors, 'hover-btn');
+        color: map-get($colors, 'main');
+    }
+    
+    &:hover::after  {
+        background: url(../../../../public/img/download-icon-hover.svg) center no-repeat;
+    }
+}
+
+.menu {
+    margin-bottom: 36px;
+
+    &__item {
+        padding: 0 0 16px 0;
+
+        &:last-child {
+            padding: 0; 
+        }
+    }
+
+    &__link {
+        position: relative;
+        color: map-get($colors, 'grey-menu');
+        padding: 0 0 0 142px;
+        @extend %menu-animation;
+    
+        &::after {
+            @include menu-left-after(false);
+            @extend %menu-animation;
+        }
+
+        &:hover {
+            color: map-get($colors, 'main');
+        }
+
+        &:hover::after {
+            @include menu-left-after(true);
+        }
+    }
+    
+    &__link_active {
+        color: map-get($colors, 'main');
+    
+        &::after {
+            @include menu-left-after(true);
+        }
+    }
+}
+
+.menu-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+
+    &__img {
+        fill: map-get($colors, 'grey-main');
+        width: 44px;
+        height: 44px;
+    }
+
+    &__img:hover {
+        fill: map-get($colors, 'main');
+    }
+}
+
+// Media breackpoints
+
+@include desktop-large {
+    .brief-info {
+        max-width: 500px;
+        top: 180px;
+
+        &__title {
+            margin-bottom: 24px;
+        }
+        
+        &__subtitle {
+            margin-bottom: 40px;
+        }
+        
+        &__text {
+            margin-bottom: 78px;
+            font-size: map-get($font-sizes, 'medium');
+            max-width: 402px;
+        }
+
+        &__btn {
+            margin-bottom: 76px;
+        }
+    }
+
+    .title {
+        font-size: map-get($font-sizes, 'title-large');
+    }
+
+    .subtitle {
+        font-size: map-get($font-sizes, 'subtitle-brief');
+    }
+
+    .download-btn {
+        padding: 18px 33px 18px 64px;
+        font-size: map-get($font-sizes, 'large');
+    }
+
+    .menu {
+        margin-bottom: 60px;
+
+        &__item {
+            padding: 0 0 24px 0;
+        }
+    }
+}
+
+@include laptop {
+    .brief-info {
+        max-width: 340px;
+        top: 70px;
+
+        &__text {
+            font-size: map-get($font-sizes, 'text-brief');
+            max-width: 300px;
+            margin-bottom: 40px;
+        }
+
+        &__btn {
+            margin-bottom: 40px;
+        }
+    }
+
+    .title {
+        font-size: map-get($font-sizes, 'subtitle');
+    }
+
+    .subtitle {
+        font-size: map-get($font-sizes, 'small');
+    }
+
+    .download-btn {
+        padding: 12px 28px 12px 64px;
+        font-size: map-get($font-sizes, 'small');
+
+        &::after {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .menu {
+        margin-bottom: 30px;
+
+        &__item {
+            padding: 0 0 12px 0;
+        }
+    }
+}

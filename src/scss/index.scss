@@ -1,63 +1,59 @@
-@import "./common/";
+@import "./common";
+@import "./components/Header/Header.scss";
+@import "./components/BriefInfo/BriefInfo.scss";
+@import "./components/AboutMe/AboutMe.scss";
+@import "./components/LinkIcon/LinkIcon.scss";
+@import "./components/Projects/Projects.scss";
+@import "./components/Chips/Chips.scss";
+@import "./components/Portfolio/Portfolio.scss";
+
+body {
+    background-color: map-get($colors, 'bg-color');
+    height: 100%;
+}
 
 .page {
     font-weight: map-get($font-weights, 'regular');
-    background-color: $bg-color;
     min-height: 100vh;
-    min-width: 320px;
+    min-width: map-get($breakpoint, 'sm');
     font-size: map-get($font-sizes, 'medium');
-    color: map-get($font-colors, 'main');
+    color: map-get($colors, 'main');
+    line-height: map-get($line-height, 'main');    
 }
 
 .container {
-    max-width: $content-with;
+    max-width: map-get($content-with, 'xxl');
     padding: 0 15px;
     margin: 0 auto;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
+.content {
+    max-width: calc(100% - 480px);
+    left: 500px;
+    float: left;
+    position: relative;
 }
 
-.header {
-    padding-top: 34px;
+// Media breackpoints
 
-    &__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+@include desktop-large {
+    .container {
+        max-width: map-get($content-with, 'xxxl');
+    }
+
+    .content {
+        max-width: calc(100% - 608px);
+        left: 604px;
     }
 }
 
-.header-lng {
-    display: flex;
-    color: map-get($font-colors, 'grey-main');
-
-    &__item {
-        position: relative;
-        padding: 0 26px 0 0;
-        font-size: map-get($font-sizes, 'small');
+@include laptop {
+    .container {
+        max-width: map-get($content-with, 'xl');
     }
 
-    &__item:last-child {
-        padding: 0 0 0 26px;
+    .content {
+        max-width: calc(100% - 380px);
+        left: 390px;
     }
-
-    &__btn_active {
-        color: map-get($font-colors, 'main');
-    }
-
-    &__btn_active {
-        cursor: default;
-    }
-
-    @include header-border(after);
-    @include header-border(before);
-
-    &__btn:hover {
-        color: map-get($font-colors, 'main');
-    }
-
-
 }
