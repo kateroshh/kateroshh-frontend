@@ -88,15 +88,28 @@
 
 @include laptop {
     .projects {
-        margin-bottom: 100px;
+        margin-bottom: 90px;
+
+        &__title {
+            margin-bottom: 60px;
+        }
+
+        .projects-container {
+            margin-bottom: 84px;
+        }
 
         .project-card {
             &__content {
-                margin: 0;
+                margin: 5px 0 0 20px;
             }
 
             &__img {
-                display: none;
+                max-width: 172px;
+                height: 116px;
+            }
+
+            &__title::after {
+                right: 23%;
             }
         }
 

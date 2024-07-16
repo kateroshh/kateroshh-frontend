@@ -1,0 +1,26 @@
+.footer {
+    display: none;
+}
+@include laptop {
+    .footer {
+        display: block;
+        padding-bottom: 54px;
+
+        &__title {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 114%;
+            text-align: center;
+            color: #fabd04;
+            margin-bottom: 48px;
+        }
+
+        &__menu {
+            margin-bottom: 65px;
+        }
+
+        &__btn {
+            text-align: center;
+        }
+    }
+}

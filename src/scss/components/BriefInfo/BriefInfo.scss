@@ -64,6 +64,16 @@
     &:hover::after  {
         background: url(../../../../public/img/download-icon-hover.svg) center no-repeat;
     }
+
+    &_no-fill {
+        background-color: map-get($colors, 'bg-color');
+        color: map-get($colors, 'accent');
+        border: 1px solid map-get($colors, 'accent');
+    }
+
+    &_no-fill::after {
+        background: url(../../../../public/img/download-icon-footer.svg) center no-repeat;
+    }
 }
 
 .menu {
@@ -173,43 +183,75 @@
 
 @include laptop {
     .brief-info {
-        max-width: 340px;
-        top: 70px;
+        position: static;
+        max-width: 100%;
+        margin-bottom: 88px;
 
         &__text {
-            font-size: map-get($font-sizes, 'text-brief');
-            max-width: 300px;
-            margin-bottom: 40px;
+            max-width: 100%;
+            margin-bottom: 84px;
+            font-size: map-get($font-sizes, 'title-small');
+            line-height: map-get($line-height, 'main');
+            text-align: center;
         }
 
         &__btn {
-            margin-bottom: 40px;
+            margin-bottom: 115px;
+            text-align: center;
+        }
+
+        &__title {
+            margin-bottom: 37px;
+        }
+        
+        &__subtitle {
+            margin-bottom: 60px;
+        }
+    }
+
+    .menu {
+        position: absolute;
+        top: 45px;
+        left: 40%;
+        display: flex;
+        margin-bottom: 0;
+        max-width: 263px;
+        width: 100%;
+        justify-content: space-between;
+
+        &__link {
+            padding: 0;
+        }
+
+        &__link::after {
+            width: 0;
         }
     }
 
     .title {
         font-size: map-get($font-sizes, 'subtitle');
+        font-weight: map-get($font-weights, 'medium');
+        font-size: map-get($font-sizes, 'big');
+        line-height: map-get($line-height, 'title-small');
+        text-align: center;
     }
 
     .subtitle {
-        font-size: map-get($font-sizes, 'small');
+        font-weight: map-get($font-weights, 'regular');
+        font-size: map-get($font-sizes, 'title-large');
+        line-height: map-get($line-height, 'title-medium');
+        text-align: center;
     }
 
     .download-btn {
-        padding: 12px 28px 12px 64px;
-        font-size: map-get($font-sizes, 'small');
-
-        &::after {
-            width: 20px;
-            height: 20px;
-        }
+        padding: 16px 31px 16px 63px;
+        font-size: map-get($font-sizes, 'large');
     }
 
-    .menu {
-        margin-bottom: 30px;
-
-        &__item {
-            padding: 0 0 12px 0;
-        }
+    .menu-icons {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
     }
+
 }

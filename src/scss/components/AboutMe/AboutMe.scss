@@ -11,6 +11,10 @@
     &__text:last-child {
         margin-bottom: 0;
     }
+
+    &__title {
+        margin-bottom: 0;
+    }
 }
 
 // Media breackpoints
@@ -27,6 +31,12 @@
         
         &__text {
             font-size: map-get($font-sizes, 'medium');
+            margin-bottom: 12px;
+            line-height: map-get($line-height, 'main'); 
+        }
+
+        &__title {
+            margin-bottom: 61px;
         }
     }
 }

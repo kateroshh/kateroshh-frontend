@@ -6,6 +6,7 @@
 @import "./components/Projects/Projects.scss";
 @import "./components/Chips/Chips.scss";
 @import "./components/Portfolio/Portfolio.scss";
+@import "./components/Footer/Footer.scss";
 
 body {
     background-color: map-get($colors, 'bg-color');
@@ -34,6 +35,13 @@ body {
     position: relative;
 }
 
+.titele-p {
+    display: none;
+    font-weight: map-get($font-weights, 'medium');
+    font-size: map-get($font-sizes, 'subtitle-smale');
+    line-height: map-get($line-height, 'title-small'); 
+}
+
 // Media breackpoints
 
 @include desktop-large {
@@ -50,10 +58,16 @@ body {
 @include laptop {
     .container {
         max-width: map-get($content-with, 'xl');
+        padding: 0 10px;
     }
 
     .content {
-        max-width: calc(100% - 380px);
-        left: 390px;
+        max-width: 100%;
+        left: 0;
+        float: none;
+    }
+
+    .titele-p {
+        display: block;
     }
 }

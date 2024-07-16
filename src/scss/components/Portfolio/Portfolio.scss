@@ -71,22 +71,31 @@
 
 @include laptop {
     .portfolio-container {
-        margin: 0 0 100px 0;
+        margin: 0 0 55px 0;
+
+        &__title {
+            margin-bottom: 85px;
+        }
+
         .portfolio {
-            margin-bottom: 100px;
+            margin-bottom: 91px;
         
             &__period {
-                max-width: 120px;
-                margin: 0 20px 0 0;
+                max-width: 222px;
+                margin: 0 0px 0 16px;
                 line-height: map-get($line-height, 'main'); 
             }
 
             &__item{
-                margin-bottom: 80px;
+                margin-bottom: 120px;
             }
 
             &__content {
-                max-width: calc(100% - 150px);
+                max-width: calc(100% - 256px);
+            }
+
+            &__about ~ .chips {
+                margin-top: 17px;
             }
         }
 
