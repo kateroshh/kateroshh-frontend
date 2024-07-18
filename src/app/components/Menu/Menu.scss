@@ -1,0 +1,80 @@
+@import "../../../scss/common/";
+
+.menu {
+    margin-bottom: 36px;
+
+    &__item {
+        padding: 0 0 16px 0;
+
+        &:last-child {
+            padding: 0; 
+        }
+    }
+
+    &__link {
+        position: relative;
+        color: map-get($colors, 'grey-menu');
+        padding: 0 0 0 142px;
+        @extend %menu-animation;
+    
+        &::after {
+            @include menu-left-after(false);
+            @extend %menu-animation;
+        }
+
+        &:hover {
+            color: map-get($colors, 'main');
+        }
+
+        &:hover::after {
+            @include menu-left-after(true);
+        }
+    }
+    
+    &__link_active {
+        color: map-get($colors, 'main');
+    
+        &::after {
+            @include menu-left-after(true);
+        }
+    }
+}
+
+// Media breackpoints
+
+@include desktop-large {
+    .menu {
+        margin-bottom: 60px;
+
+        &__item {
+            padding: 0 0 24px 0;
+        }
+    }
+}
+
+@include laptop {
+    .menu {
+        position: absolute;
+        top: 45px;
+        left: 40%;
+        display: flex;
+        margin-bottom: 0;
+        max-width: 263px;
+        width: 100%;
+        justify-content: space-between;
+
+        &__link {
+            padding: 0;
+        }
+
+        &__link::after {
+            width: 0;
+        }
+    }
+}
+
+@include tablet {
+    .menu {
+        display: none;
+    }
+}

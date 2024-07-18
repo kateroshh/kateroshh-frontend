@@ -1,0 +1,36 @@
+@import "../../../scss/common/";
+
+.header-lng {
+    display: flex;
+    color: map-get($colors, 'grey-main');
+    @extend %menu-animation;
+
+    &__item {
+        position: relative;
+        padding: 0 26px 0 0;
+        font-size: map-get($font-sizes, 'small');
+    }
+
+    &__item:last-child {
+        padding: 0 0 0 26px;
+    }
+
+    &__btn_active {
+        color: map-get($colors, 'main');
+        cursor: default;
+    }
+
+    @include header-border(after);
+    @include header-border(before);
+
+    &__btn:hover {
+        cursor: pointer;
+        color: map-get($colors, 'main');
+    }
+}
+
+@include mobile {
+    .header-lng {
+        display: none;
+    }
+}

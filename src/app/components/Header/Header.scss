@@ -1,3 +1,5 @@
+@import "../../../scss/common/";
+
 .header {
     padding-top: 10px;
     margin: 0 0 47px 0;
@@ -10,35 +12,6 @@
 
     &__menu-bg {
         display: none;
-    }
-
-    .header-lng {
-        display: flex;
-        color: map-get($colors, 'grey-main');
-        @extend %menu-animation;
-    
-        &__item {
-            position: relative;
-            padding: 0 26px 0 0;
-            font-size: map-get($font-sizes, 'small');
-        }
-    
-        &__item:last-child {
-            padding: 0 0 0 26px;
-        }
-    
-        &__btn_active {
-            color: map-get($colors, 'main');
-            cursor: default;
-        }
-    
-        @include header-border(after);
-        @include header-border(before);
-    
-        &__btn:hover {
-            cursor: pointer;
-            color: map-get($colors, 'main');
-        }
     }
 
     .burger {
@@ -83,27 +56,6 @@
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
-        }
-
-        .menu {
-            position: static;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 10;
-            margin-top: 20px;
-    
-            &__item {
-                font-weight: map-get($font-weights, 'medium');
-                font-size: map-get($font-sizes, 'subtitle');
-                line-height: map-get($line-height, 'main');
-                margin-bottom: 40px;
-            }
-        }
-
-        .download-btn {
-            z-index: 10;
         }
 
         .burger {
@@ -157,16 +109,9 @@
             height: 20px;
         }
 
-        .header-lng {
-            display: none;
-        }
-
         .burger {
             max-width: 24px;
             height: 10px;
         }
-
-
     }
-
 }
