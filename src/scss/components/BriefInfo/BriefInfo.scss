@@ -255,3 +255,63 @@
     }
 
 }
+
+@include tablet {
+    .menu {
+        display: none;
+    }
+}
+
+@include mobile {
+
+    .brief-info {
+        margin-bottom: 85px;
+    
+        &__title {
+            margin-bottom: 21px;
+        }
+
+        &__subtitle {
+            margin-bottom: 40px;
+        }
+
+        &__text {
+            margin-bottom: 26px;
+            font-size: map-get($font-sizes, 'small');
+            text-align: left;
+            line-height: map-get($line-height, 'text-mobil');
+        }
+
+        &__btn {
+            margin-bottom: 38px;
+            text-align: left;
+        }
+    }
+
+    
+    .title {
+        font-size: map-get($font-sizes, 'subtitle-smale');
+        line-height: map-get($line-height, 'text'); 
+        text-align: left;
+    }
+
+    .subtitle {
+        font-size: map-get($font-sizes, 'large');
+        line-height: map-get($line-height, 'text'); 
+        text-align: left;
+    }
+
+    .download-btn {
+        font-size: map-get($font-sizes, 'small');
+        line-height: map-get($line-height, 'text-mobil');
+        padding: 12px 40px 12px 40px;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .menu-icons {
+        margin: 0;
+    }
+}

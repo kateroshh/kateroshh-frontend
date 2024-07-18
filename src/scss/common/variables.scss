@@ -2,16 +2,16 @@ $content-with: (
     xxxl: 1382px,
     xxl: 1140px,
     xl: 885px,
-    md: 768px, 
-    sm: 390px,
+    md: 820px, 
+    sm: 380px,
 );
 
 $breakpoint: (
     xxxl: 1500px,
     xxl: 1280px,
     xl: 1024px,
-    md: 768px, 
-    sm: 390px,
+    md: 930px, 
+    sm: 600px,
 );
 
 $colors: (
@@ -50,6 +50,7 @@ $line-height: (
     title-large: 167%, 
     main: 133%,
     text: 130%,
+    text-mobil: 125%,
     title-medium: 120%,
     title-small: 111%,
     period: 192%,

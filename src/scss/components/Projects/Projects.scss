@@ -115,3 +115,61 @@
 
     }
 }
+
+@include tablet {
+    .projects {
+
+        .project-card {
+            &__title::after {
+                right: 0;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .projects {
+        &__title {
+            margin-bottom: 49px;
+        }
+
+        .projects-container {
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            &__link {
+                padding: 0;
+                margin: 0;
+            }
+        
+            &__link:hover {
+                background-color: transparent;
+                border-radius: 0;
+            }
+
+            &__img {
+                display: none;
+            }
+
+            &__content {
+                margin: 0;
+            }
+
+            &__title {
+                font-size: map-get($font-sizes, 'large');
+                line-height: map-get($line-height, 'title-medium'); 
+            }
+        
+            &__text {
+                font-size: map-get($font-sizes, 'small');
+                line-height: map-get($line-height, 'text-mobil');  
+            }
+
+            &__about {
+                margin-bottom: 30px;
+            }
+  
+        }
+    }
+}

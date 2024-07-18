@@ -28,3 +28,26 @@
         @extend %menu-animation;
     }
 }
+
+@include mobile {
+    .projects {
+        .project-card {
+            .link-icon {
+                &::after {
+                    background: none;
+                    width: 0;
+                    height: 0;
+                }
+
+                &:hover {
+                    color: map-get($colors, 'main');
+                }
+            }
+        }
+    }
+
+    .link-icon {
+        font-size: map-get($font-sizes, 'small');
+        line-height: map-get($line-height, 'title-large');  
+    }
+}

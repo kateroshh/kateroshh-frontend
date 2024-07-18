@@ -97,7 +97,68 @@
             &__about ~ .chips {
                 margin-top: 17px;
             }
+
+            &__all {
+                margin-left: 0;
+            } 
         }
 
+    }
+}
+
+@include tablet {
+    .portfolio-container {
+        
+        &__title {
+            margin-bottom: 36px;
+        }
+
+        .portfolio {
+
+            &__period {
+                max-width: 100%;
+                margin: 0;
+                position: absolute;
+                top: 30px;
+                left: 0;
+            }
+
+            &__item{
+                flex-direction: column;
+                position: relative;
+                margin-bottom: 64px;
+            }
+
+            &__title {
+                margin-bottom: 55px;
+            }
+
+            &__content {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .portfolio-container {
+        margin: 0 0 102px 0;
+        
+        &__title {
+            margin-bottom: 34px;
+        }
+
+        .portfolio {
+            margin-bottom: 38px;
+
+            &__period {
+                top: 32px;
+            }
+
+            &__title {
+                margin-bottom: 67px;
+            }
+        }
+        
     }
 }

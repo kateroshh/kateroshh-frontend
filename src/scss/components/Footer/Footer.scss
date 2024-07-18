@@ -1,6 +1,7 @@
 .footer {
     display: none;
 }
+
 @include laptop {
     .footer {
         display: block;
@@ -21,6 +22,22 @@
 
         &__btn {
             text-align: center;
+        }
+    }
+}
+
+@include mobile {
+    .footer {
+        padding-bottom: 54px;
+
+        &__title {
+            font-size: map-get($font-sizes, 'medium');
+            line-height: map-get($line-height, 'main');  
+            margin-bottom: 26px;
+        }
+
+        &__menu {
+            margin: 0 auto 42px auto;
         }
     }
 }

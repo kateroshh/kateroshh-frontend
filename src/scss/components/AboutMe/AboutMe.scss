@@ -40,3 +40,19 @@
         }
     }
 }
+
+@include mobile {
+    .about-me {
+        margin-bottom: 88px;
+        
+        &__title {
+            margin-bottom: 40px;
+        }
+
+        &__text {
+            margin-bottom: 12px;
+            font-size: map-get($font-sizes, 'small');
+            line-height: map-get($line-height, 'text-mobil');  
+        }
+    }
+}

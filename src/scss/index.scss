@@ -16,7 +16,7 @@ body {
 .page {
     font-weight: map-get($font-weights, 'regular');
     min-height: 100vh;
-    min-width: map-get($breakpoint, 'sm');
+    min-width: map-get($content-with, 'sm');
     font-size: map-get($font-sizes, 'medium');
     color: map-get($colors, 'main');
     line-height: map-get($line-height, 'main');    
@@ -67,7 +67,31 @@ body {
         float: none;
     }
 
-    .titele-p {
+    .title-p {
         display: block;
+    }
+}
+
+@include tablet {
+    .container {
+        max-width: map-get($content-with, 'md');
+        padding: 0 20px;
+    }
+}
+
+@include mobile {
+    .page {
+        font-size: map-get($font-sizes, 'small');
+        line-height: map-get($line-height, 'text-mobil');  
+    }
+
+    .container {
+        max-width: map-get($content-with, 'sm');
+        padding: 0 10px;
+    }
+
+    .title-p {
+        font-size: map-get($font-sizes, 'title-small');
+        line-height: map-get($line-height, 'main'); 
     }
 }
