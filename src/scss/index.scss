@@ -1,6 +1,6 @@
 @import "./common";
 // @import "./components/Header/Header.scss";
-@import "./components/BriefInfo/BriefInfo.scss";
+// @import "./components/BriefInfo/BriefInfo.scss";
 @import "./components/AboutMe/AboutMe.scss";
 @import "./components/LinkIcon/LinkIcon.scss";
 @import "./components/Projects/Projects.scss";
@@ -35,7 +35,7 @@ body {
     position: relative;
 }
 
-.titele-p {
+.title-p {
     display: none;
     font-weight: map-get($font-weights, 'medium');
     font-size: map-get($font-sizes, 'subtitle-smale');
