@@ -10,7 +10,7 @@ const MobileMenu: FC = () => {
   return (
     <>
       <div className="burger"></div>
-      <div className="header__menu-bg">
+      <div className="mobile-menu">
         <Menu />
         <Button />
         <MenuIcons />

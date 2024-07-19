@@ -1,0 +1,45 @@
+@import "../../../scss/common/";
+
+.projects {
+    margin-bottom: 133px;
+
+    .projects-container {
+        margin-bottom: 80px;
+    }
+}
+
+// Media breackpoints
+
+@include desktop-large {
+    .projects {
+        .projects-container {
+            margin-bottom: 109px;
+        }
+    }
+}
+
+@include laptop {
+    .projects {
+        margin-bottom: 90px;
+
+        &__title {
+            margin-bottom: 60px;
+        }
+
+        .projects-container {
+            margin-bottom: 84px;
+        }
+    }
+}
+
+@include mobile {
+    .projects {
+        &__title {
+            margin-bottom: 49px;
+        }
+
+        .projects-container {
+            margin-bottom: 40px;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+@import "../../../scss/common/";
+
+.portfolio-card{
+    display: flex;
+    margin-bottom: 119px;
+
+        
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    &__period {
+        color: map-get($colors, 'grey-main');
+        max-width: 165px;
+        width: 100%;
+        margin: -5px 56px 0 0;
+        line-height: map-get($line-height, 'period'); 
+    }
+
+    &__content {
+        max-width: calc(100% - 225px);
+    }
+
+    &__title {
+        font-weight: map-get($font-weights, 'medium');
+        font-size: map-get($font-sizes, 'large');
+        line-height: map-get($line-height, 'text'); 
+        margin-bottom: 16px;
+    }
+
+    &__about ~ .chips {
+        margin-top: 19px;
+    }
+
+    &__text {
+        margin-bottom: 13px;
+    }
+
+    &__text:last-child {
+        margin-bottom: 0;
+    }
+
+    &__link {
+        color: map-get($colors, 'main');
+        margin-left: 5px;
+    }
+}
+
+@include laptop {
+    .portfolio-card{
+        margin-bottom: 120px;
+
+        &__period {
+            max-width: 222px;
+            margin: 0 0px 0 16px;
+            line-height: map-get($line-height, 'main'); 
+        }
+    
+        &__content {
+            max-width: calc(100% - 256px);
+        }
+    
+        &__about ~ .chips {
+            margin-top: 17px;
+        }
+    }
+}
+
+@include tablet {
+    .portfolio-card{
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 64px;
+
+        &__period {
+            max-width: 100%;
+            margin: 0;
+            position: absolute;
+            top: 30px;
+            left: 0;
+        }
+    
+        &__title {
+            margin-bottom: 55px;
+        }
+    
+        &__content {
+            max-width: 100%;
+        }
+    }
+}
+
+@include mobile {
+    .portfolio-card {
+        &__period {
+            top: 32px;
+        }
+    
+        &__title {
+            margin-bottom: 67px;
+        }
+    }
+}

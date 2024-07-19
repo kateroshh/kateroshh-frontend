@@ -1,12 +1,4 @@
 @import "./common";
-// @import "./components/Header/Header.scss";
-// @import "./components/BriefInfo/BriefInfo.scss";
-@import "./components/AboutMe/AboutMe.scss";
-@import "./components/LinkIcon/LinkIcon.scss";
-@import "./components/Projects/Projects.scss";
-@import "./components/Chips/Chips.scss";
-@import "./components/Portfolio/Portfolio.scss";
-@import "./components/Footer/Footer.scss";
 
 body {
     background-color: map-get($colors, 'bg-color');
@@ -40,6 +32,37 @@ body {
     font-weight: map-get($font-weights, 'medium');
     font-size: map-get($font-sizes, 'subtitle-smale');
     line-height: map-get($line-height, 'title-small'); 
+}
+
+.link-icon {
+    position: relative;
+    font-weight: map-get($font-weights, 'medium');
+    font-size: map-get($font-sizes, 'large');
+    line-height: map-get($line-height, 'text'); 
+    color: map-get($colors, 'main');
+    padding: 0 31px 0 0;
+
+    &::after {
+        content: '';
+        background: no-repeat url(../../public/img/arrow-up.svg);
+        background-size: cover;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 40%;
+        right: 0;
+    }
+
+    &:hover {
+        color: map-get($colors, 'accent');
+        @extend %menu-animation;
+    }
+
+    &:hover::after {
+        background: no-repeat url(../../public/img/arrow-up-hover.svg);
+        transform: translateX(5px) translateY(-5px);
+        @extend %menu-animation;
+    }
 }
 
 // Media breackpoints
@@ -93,5 +116,26 @@ body {
     .title-p {
         font-size: map-get($font-sizes, 'title-small');
         line-height: map-get($line-height, 'main'); 
+    }
+
+    .projects {
+        .project-card {
+            .link-icon {
+                &::after {
+                    background: none;
+                    width: 0;
+                    height: 0;
+                }
+
+                &:hover {
+                    color: map-get($colors, 'main');
+                }
+            }
+        }
+    }
+
+    .link-icon {
+        font-size: map-get($font-sizes, 'small');
+        line-height: map-get($line-height, 'title-large');  
     }
 }

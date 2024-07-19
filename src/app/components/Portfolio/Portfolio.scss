@@ -1,0 +1,70 @@
+@import "../../../scss/common/";
+
+.portfolio {
+    margin: 0 0 150px 16px;
+
+    .portfolio-cards {
+        margin-bottom: 132px;
+    
+        .portfolio-list {
+            list-style: '- ';
+            list-style-position: inside;
+    
+            &__item {
+                margin-left: 5px;
+            }
+    
+            &__item:last-child {
+                margin-bottom: 0;
+            }
+            
+        }
+    
+        &__all {
+            margin-left: -15px;
+        } 
+    }
+}
+
+@include laptop {
+    .portfolio {
+        margin: 0 0 55px 0;
+
+        &__title {
+            margin-bottom: 85px;
+        }
+
+        .portfolio-cards {
+            margin-bottom: 91px;
+
+            &__all {
+                margin-left: 0;
+            } 
+        }
+
+    }
+}
+
+@include tablet {
+    .portfolio {
+        
+        &__title {
+            margin-bottom: 36px;
+        }
+    }
+}
+
+@include mobile {
+    .portfolio {
+        margin: 0 0 102px 0;
+        
+        &__title {
+            margin-bottom: 34px;
+        }
+
+        .portfolio-cards {
+            margin-bottom: 38px;
+        }
+        
+    }
+}
