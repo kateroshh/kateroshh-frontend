@@ -1,7 +1,7 @@
 
 
 @mixin header-border($direction) {
-    &__btn_#{$direction}::#{$direction} {
+    &__label_#{$direction}::#{$direction} {
         @extend %header-border;
         @extend %menu-animation;
 
@@ -14,7 +14,7 @@
         }
     }
 
-    &__btn_#{$direction}:hover::#{$direction} {
+    &__label_#{$direction}:hover::#{$direction} {
         color: map-get($colors, 'main');
     }
 }

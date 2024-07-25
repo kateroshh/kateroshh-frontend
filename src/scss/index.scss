@@ -6,6 +6,7 @@ body {
 }
 
 .page {
+    font-family: 'Inter', Arial, sans-serif;
     font-weight: map-get($font-weights, 'regular');
     min-height: 100vh;
     min-width: map-get($content-with, 'sm');

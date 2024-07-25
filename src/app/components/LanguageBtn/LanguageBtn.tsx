@@ -1,19 +1,52 @@
 "use client";
-import { FC } from "react";
+import { FC, ChangeEvent } from "react";
+import { useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
+
 import "./LanguageBtn.scss";
 
 const LanguageBtn: FC = () => {
+  const router = useRouter();
+  const localActive = useLocale();
+
+  const onSelectChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const nextLocale = e.target.value;
+    router.replace(`/${nextLocale}`);
+  };
+
   return (
-    <ul className="header-lng">
-      <li className="header-lng__item">
-        <button className="header-lng__btn header-lng__btn_after header-lng__btn_active">
-          РУС
-        </button>
-      </li>
-      <li className="header-lng__item">
-        <button className="header-lng__btn header-lng__btn_before">ENG</button>
-      </li>
-    </ul>
+    <div className="header-lng">
+      <input
+        className="header-lng__item"
+        type="radio"
+        value="ru"
+        name="lng"
+        id="ru"
+        onChange={onSelectChange}
+        disabled={localActive === "ru" ? true : false}
+      />
+      <label
+        className={`header-lng__label header-lng__label_after ${localActive === "ru" ? "header-lng__label_active" : ""}`}
+        htmlFor="ru"
+      >
+        РУС
+      </label>
+      <input
+        className="header-lng__item"
+        type="radio"
+        value="en"
+        name="lng"
+        id="en"
+        onChange={onSelectChange}
+        disabled={localActive === "en" ? true : false}
+      />
+      <label
+        className={`header-lng__label header-lng__label_before ${localActive === "en" ? "header-lng__label_active" : ""}`}
+        htmlFor="en"
+      >
+        ENG
+      </label>
+    </div>
   );
 };
 
