@@ -1,5 +1,15 @@
 {
     "HomePage": {
       "title": "Привет мир!"
+    },
+
+    "Menu": {
+      "about": "Обо мне",
+      "project": "Проекты",
+      "experience": "Опыт"
+    },
+
+    "Button": {
+      "download": "Резюме"
     }
   }

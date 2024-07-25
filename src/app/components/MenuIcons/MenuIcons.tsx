@@ -1,12 +1,19 @@
 "use client";
 import { FC } from "react";
 import "./MenuIcons.scss";
+import {
+  TG,
+  GMAIL,
+  GITHUB,
+  LEETCODE,
+  LINKEDIN,
+} from "../../../utils/constants";
 
 const MenuIcons: FC = () => {
   return (
     <nav className="menu-icons">
       <li className="menu-icons__item">
-        <a className="menu-icons__link" href="#">
+        <a className="menu-icons__link" href={TG} target="blank">
           <svg
             className="menu-icons__img"
             width="44"
@@ -18,7 +25,7 @@ const MenuIcons: FC = () => {
         </a>
       </li>
       <li className="menu-icons__item">
-        <a className="menu-icons__link" href="#">
+        <a className="menu-icons__link" href={GMAIL} target="blank">
           <svg
             className="menu-icons__img"
             width="44"
@@ -31,7 +38,7 @@ const MenuIcons: FC = () => {
         </a>
       </li>
       <li className="menu-icons__item">
-        <a className="menu-icons__link" href="#">
+        <a className="menu-icons__link" href={GITHUB} target="blank">
           <svg
             className="menu-icons__img"
             width="44"
@@ -43,7 +50,7 @@ const MenuIcons: FC = () => {
         </a>
       </li>
       <li className="menu-icons__item">
-        <a className="menu-icons__link" href="#">
+        <a className="menu-icons__link" href={LEETCODE} target="blank">
           <svg
             className="menu-icons__img"
             width="44"
@@ -62,7 +69,7 @@ const MenuIcons: FC = () => {
         </a>
       </li>
       <li className="menu-icons__item">
-        <a className="menu-icons__link" href="#">
+        <a className="menu-icons__link" href={LINKEDIN} target="blank">
           <svg
             className="menu-icons__img"
             width="44"
