@@ -57,9 +57,9 @@
 }
 
 @include tablet {
-    .download-btn {
-        z-index: 10;
-    }
+    // .download-btn {
+    //     z-index: 10;
+    // }
 }
 
 @include mobile {

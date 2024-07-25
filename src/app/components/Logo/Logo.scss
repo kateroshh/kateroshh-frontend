@@ -1,0 +1,10 @@
+@import "../../../scss/common/";
+
+@include mobile {
+    .logo {
+        max-width: 90px;
+        width: 100%;
+        height: 20px;
+        z-index: 50;
+    }
+}

@@ -5,6 +5,10 @@ body {
     height: 100%;
 }
 
+.hide-scroll {
+    overflow: hidden;
+}
+
 .page {
     font-family: 'Inter', Arial, sans-serif;
     font-weight: map-get($font-weights, 'regular');

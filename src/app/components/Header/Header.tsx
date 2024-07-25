@@ -2,9 +2,7 @@
 import { FC } from "react";
 import "./Header.scss";
 
-import Image from "next/image";
-import Logo from "../../../../public/img/logo.svg";
-
+import Logo from "../Logo/Logo";
 import LanguageBtn from "../LanguageBtn/LanguageBtn";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
@@ -13,7 +11,7 @@ const Header: FC = () => {
     <header className="header">
       <div className="container">
         <div className="header__container">
-          <Image className="header__logo" src={Logo} alt="logo" />
+          <Logo />
           <LanguageBtn />
           <MobileMenu />
         </div>

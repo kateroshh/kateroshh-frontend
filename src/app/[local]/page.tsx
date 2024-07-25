@@ -15,7 +15,7 @@ const Home: FC = () => {
   const t = useTranslations("HomePage");
   return (
     <div className="page">
-      <h1>{t("title")}</h1>
+      {/* <h1>{t("title")}</h1> */}
       <Header />
       <main className="main">
         <div className="container">

@@ -1,10 +1,13 @@
 "use client";
 import { FC } from "react";
 import "./Menu.scss";
+import { MobileProps } from "../../../types/types";
 
-const Menu: FC = () => {
+const Menu: FC<MobileProps> = ({ isMobile }) => {
+  console.log(isMobile);
+
   return (
-    <nav className="menu">
+    <nav className={`menu ${isMobile ? "menu_active" : ""}`}>
       <li className="menu__item">
         <a className="menu__link menu__link_active" href="#">
           Обо мне

@@ -36,8 +36,13 @@
     }
 }
 
-@include mobile {
+@include tablet {
     .header-lng {
         display: none;
+
+        &_mobile {
+            display: flex;
+            z-index: 10;
+        }
     }
 }

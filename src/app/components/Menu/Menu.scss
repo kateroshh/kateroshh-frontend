@@ -76,5 +76,26 @@
 @include tablet {
     .menu {
         display: none;
+
+        &_active {
+            position: static;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+            font-size: map-get($font-sizes, 'title-small');
+            line-height: map-get($line-height, 'main');
+    
+            .menu__item {
+                margin-bottom: 20px;
+            }
+
+            .menu__item:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
+
+
 }
