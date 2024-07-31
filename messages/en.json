@@ -11,6 +11,19 @@
 
     "Button": {
       "download": "CV"
+    },
+
+    "BriefInfo": {
+      "name": "Kate Roshchupkina",
+      "prof": "Frontend Engineer",
+      "brif": "I build pixel-perfect, engaging, and accessible digital experiences."
+    },
+
+    "AboutMe": {
+      "p1": "I am a developer with 10 years of experience in IT. During this time, I have come a long way from a business analyst to a senior BI developer (QlikView and Qlik Sense). I always strive to make cool and customer-oriented products. So in 2022, I decided to develop in web development to improve one of my management products.",
+      "p2": "Currently I work with HTML, CSS, JavaScript, React, TypeScript and SCSS. I code according to the Pixel Perfect concept and use the BEM approach. I can write a backend for my projects on Node.js, MongoDB and use Postman to debug the project.",
+      "p3": "I love to learn and strive for continuous professional development, learning new technologies and best practices in the field of frontend development.",
+      "p4": "I am ready to contribute to the creation of quality products for your clients and users :)"
     }
 
   }

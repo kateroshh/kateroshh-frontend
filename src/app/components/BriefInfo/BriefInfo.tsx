@@ -6,17 +6,16 @@ import Menu from "../Menu/Menu";
 import MenuIcons from "../MenuIcons/MenuIcons";
 import Button from "../Button/Button";
 
+import { useTranslations } from "next-intl";
+
 const BriefInfo: FC = () => {
+  const t = useTranslations("BriefInfo");
+
   return (
     <div className="brief-info">
-      <h1 className="brief-info__title title">Екатерина Рощупкина</h1>
-      <h2 className="brief-info__subtitle subtitle">Frontend – разрабочик</h2>
-      <p className="brief-info__text">
-        Привет, меня зовут Катя, буду рада познакомиться. Я
-        frontend-разработчик. Моя цель - создавать доступные и интуитивно
-        понятные интерфейсы, которые облегчают жизнь пользователей и закроют их
-        потребности. 
-      </p>
+      <h1 className="brief-info__title title">{t("name")}</h1>
+      <h2 className="brief-info__subtitle subtitle">{t("prof")}</h2>
+      <p className="brief-info__text">{t("brif")}</p>
       <div className="brief-info__btn">
         <Button />
       </div>
