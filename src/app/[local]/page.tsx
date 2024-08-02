@@ -9,13 +9,9 @@ import Projects from "../components/Projects/Projects";
 import Portfolio from "../components/Portfolio/Portfolio";
 import Footer from "../components/Footer/Footer";
 
-import { useTranslations } from "next-intl";
-
 const Home: FC = () => {
-  const t = useTranslations("HomePage");
   return (
     <div className="page">
-      {/* <h1>{t("title")}</h1> */}
       <Header />
       <main className="main">
         <div className="container">
