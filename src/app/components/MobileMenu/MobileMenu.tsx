@@ -2,10 +2,10 @@
 import { FC, useState } from "react";
 import "./MobileMenu.scss";
 
-import Menu from "../Menu/Menu";
-import MenuIcons from "../MenuIcons/MenuIcons";
-import Button from "../Button/Button";
-import LanguageBtn from "../LanguageBtn/LanguageBtn";
+import Menu from "@/components/Menu/Menu";
+import MenuIcons from "@/components/MenuIcons/MenuIcons";
+import Button from "@/components/Button/Button";
+import LanguageBtn from "@/components/LanguageBtn/LanguageBtn";
 
 const MobileMenu: FC = () => {
   const [isMobileMenu, setIsMobileMenu] = useState(false);

@@ -1,4 +1,4 @@
-@import "../../../scss/common/";
+@import "@/scss/common/";
 
 .footer {
     display: none;
@@ -40,6 +40,8 @@
 
         &__menu {
             margin: 0 auto 42px auto;
+            display: flex;
+            justify-content: center;
         }
     }
 }

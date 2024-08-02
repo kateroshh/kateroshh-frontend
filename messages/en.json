@@ -19,11 +19,86 @@
       "brif": "I build pixel-perfect, engaging, and accessible digital experiences."
     },
 
-    "AboutMe": {
-      "p1": "I am a developer with 10 years of experience in IT. During this time, I have come a long way from a business analyst to a senior BI developer (QlikView and Qlik Sense). I always strive to make cool and customer-oriented products. So in 2022, I decided to develop in web development to improve one of my management products.",
-      "p2": "Currently I work with HTML, CSS, JavaScript, React, TypeScript and SCSS. I code according to the Pixel Perfect concept and use the BEM approach. I can write a backend for my projects on Node.js, MongoDB and use Postman to debug the project.",
-      "p3": "I love to learn and strive for continuous professional development, learning new technologies and best practices in the field of frontend development.",
-      "p4": "I am ready to contribute to the creation of quality products for your clients and users :)"
-    }
+    "AboutMe": [
+      "I am a developer with 10 years of experience in IT. During this time, I have come a long way from a business analyst to a senior BI developer (QlikView and Qlik Sense). I always strive to make cool and customer-oriented products. So in 2022, I decided to develop in web development to improve one of my management products.",
+      "Currently I work with HTML, CSS, JavaScript, React, TypeScript and SCSS. I code according to the Pixel Perfect concept and use the BEM approach. I can write a backend for my projects on Node.js, MongoDB and use Postman to debug the project.",
+      "I love to learn and strive for continuous professional development, learning new technologies and best practices in the field of frontend development.",
+      "I am ready to contribute to the creation of quality products for your clients and users :)"
+    ],
 
-  }
+    "Projects": 
+      [
+        {
+          "id": "1",
+          "title": "Application builder microservice – HRSpace",
+          "about": "Project for HRSpace (hrspace.hh.ru) Microservice for an application builder for searching for recruiters. The goals of the service: to give customers the opportunity to place an application for selection under three payment models. Recruiters - to respond and correspond with clients within the internal chat, send a resume and register a released employee (date of release and completion of the probationary period).",
+          "chips": ["Java Script", "React", "TypeScript", "SCSS"],
+          "link": "#111",
+          "main": true
+        },
+        {
+          "id": "2",
+          "title": "2 Application builder microservice – HRSpace",
+          "about": "2 Project for HRSpace (hrspace.hh.ru) Microservice for an application builder for searching for recruiters. The goals of the service: to give customers the opportunity to place an application for selection under three payment models. Recruiters - to respond and correspond with clients within the internal chat, send a resume and register a released employee (date of release and completion of the probationary period).",
+          "chips": [],
+          "link": "#",
+          "main": false
+        },
+        {
+          "id": "3",
+          "title": "3 Application builder microservice – HRSpace",
+          "about": "3 Project for HRSpace (hrspace.hh.ru) Microservice for an application builder for searching for recruiters. The goals of the service: to give customers the opportunity to place an application for selection under three payment models. Recruiters - to respond and correspond with clients within the internal chat, send a resume and register a released employee (date of release and completion of the probationary period).",
+          "chips": [],
+          "link": "#",
+          "main": false
+        }
+      ],
+
+      "Portfolio": [
+        {
+          "id": "1",
+          "sort": 1,
+          "period": "2023 — настоящее время",
+          "title": "Frontend-разработчик – Фриланс",
+          "text": [
+            "Проект для HRSpace (hrspace.hh.ru) «Микросервис билдера заявки для поиска рекрутеров»: разработка кастомных форм на JavaScript / TypeScript и с использованием библиотеки Formik."
+          ],
+          "links": [
+            {
+              "href": "https://github.com/Space-HR/hr-space-frontend",
+              "title": "HRSpace (github)"
+            }
+          ],
+          "chips": ["Java Script", "React", "TypeScript", "SCSS"],
+          "main": true
+        },
+        {
+          "id": "2",
+          "sort": 2,
+          "period": "2020 — настоящее время",
+          "title": "Главный инженер по разработке, трайб «Забота о клиентах» – Сбер",
+          "text": [
+            "Разработка отчетности в системе бизнес-анализа (BI) QlikView и Qlik Sense (включая библиотеку VizLib). Разработка приложений по полному циклу включая анализ источников, формирование скриптов загрузки, проектирование модели данных, создание визуализации. Создание и развитие процессов управления данными и их качеством. Разработка ETL-процедур (Tasks in Qlik).",
+            "Разработка расширений на JavaScript, HTML, CSS."
+          ],
+          "main": true
+        },
+        {
+          "id": "3",
+          "sort": 3,
+          "period": "2017 — 2020",
+          "title": "Руководитель проектов, трайб «Корпоративные клиенты 360» – Сбер",
+          "text": [
+            "Владелец продукта команды (12 человек): ведение и приоритизация бэклога; синхронизация работ с другими командами; проработка архитектуры (концептуальной и solution), согласование архитектур; вывод продуктов в промышленную эксплуатацию."
+          ],
+          "achievements": [
+            "Собрана и запущена команда в соответствии с принципами Agile",
+            "Сокращен Т2М по выводу продуктов в промышленную эксплуатацию (с месяца до 2 недель)",
+            "Одновременная работа с 10 заказчиками",
+            "В 2017 году команда признана самой клиентоориентированой командой трайба"
+          ],
+          "main": true
+        }
+      ]
+
+}

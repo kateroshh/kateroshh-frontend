@@ -1,34 +1,64 @@
 "use client";
 import { FC } from "react";
 import "./PortfolioCard.scss";
+import { TPortfolioCard } from "@/types/types";
 
-import Chips from "../Chips/Chips";
+import Chips from "@/components/Chips/Chips";
+import List from "./List/List";
+import Links from "./Links/Links";
+import Text from "@/components/Text/Text";
 
-const PortfolioCard: FC = () => {
+const PortfolioCard: FC<TPortfolioCard> = ({
+  period,
+  title,
+  text,
+  achievements,
+  chips,
+  links,
+}) => {
   return (
     <li className="portfolio-card">
-      <p className="portfolio-card__period">2023 — настоящее время</p>
+      <p className="portfolio-card__period">{period}</p>
       <div className="portfolio-card__content">
-        <h3 className="portfolio-card__title">
-          Frontend-разработчик – Фриланс
-        </h3>
+        <h3 className="portfolio-card__title">{title}</h3>
         <div className="portfolio-card__about">
-          <p className="portfolio-card__text">
-            Проект для HRSpace (hrspace.hh.ru) «Микросервис билдера заявки для
-            поиска рекрутеров»: разработка кастомных форм на JavaScript /
-            TypeScript и с использованием библиотеки Formik.
-          </p>
-          <p className="portfolio-card__text">
-            Ссылка на проект:
-            <a
-              className="portfolio-card__link"
-              href="https://github.com/Space-HR/hr-space-frontend"
-            >
-              https://github.com/Space-HR/hr-space-frontend
-            </a>
-          </p>
+          {/* {text &&
+            text.map((item, index) => (
+              <p key={index} className="portfolio-card__text">
+                {item}
+              </p>
+            ))} */}
+
+          <Text textArray={text} classNameText="portfolio-card__text" />
+
+          <List list={achievements} title={"Достижения:"} />
+
+          <Links list={links} title={"Ссылка на проект:"} />
+
+          {/* {achievements && (
+            <div className="portfolio__text">
+              Достижения:
+              <ul className="portfolio-list">
+                {achievements.map((item, index) => (
+                  <li key={index} className="portfolio-list__item">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {links && (
+            <p className="portfolio__text">
+              Ссылка на проект:
+              {links.map((item, index) => (
+                <a key={index} className="portfolio__link" href={item.href}>
+                  {item.title}
+                </a>
+              ))}
+            </p>
+          )} */}
         </div>
-        <Chips />
+        <Chips chips={chips} />
       </div>
     </li>
   );

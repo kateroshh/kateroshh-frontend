@@ -1,6 +1,8 @@
-@import "../../../scss/common/";
+@import "@/scss/common/";
 
 .project-card {
+    margin-bottom: 50px;
+    
     &__link {
         display: flex;
         color: map-get($colors, 'main');

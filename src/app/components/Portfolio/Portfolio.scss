@@ -1,4 +1,4 @@
-@import "../../../scss/common/";
+@import "@/scss/common/";
 
 .portfolio {
     margin: 0 0 150px 16px;
@@ -16,6 +16,14 @@
     
             &__item:last-child {
                 margin-bottom: 0;
+            }
+
+            &__link {
+                color: map-get($colors, 'main');
+            }
+
+            &__link:hover {
+                color: map-get($colors, 'accent');
             }
             
         }

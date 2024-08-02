@@ -4,7 +4,7 @@ import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 
 import "./LanguageBtn.scss";
-import { MobileProps } from "../../../types/types";
+import { MobileProps } from "@/types/types";
 
 const LanguageBtn: FC<MobileProps> = ({ isMobile }) => {
   const router = useRouter();

@@ -1,4 +1,4 @@
-@import "../../../scss/common/";
+@import "@/scss/common/";
 
 .download-btn {
     position: relative;
@@ -54,12 +54,6 @@
         padding: 16px 31px 16px 63px;
         font-size: map-get($font-sizes, 'large');
     }
-}
-
-@include tablet {
-    // .download-btn {
-    //     z-index: 10;
-    // }
 }
 
 @include mobile {

@@ -1,13 +1,7 @@
 "use client";
 import { FC } from "react";
 import "./MenuIcons.scss";
-import {
-  TG,
-  GMAIL,
-  GITHUB,
-  LEETCODE,
-  LINKEDIN,
-} from "../../../utils/constants";
+import { TG, GMAIL, GITHUB, LEETCODE, LINKEDIN } from "@/constants";
 
 const MenuIcons: FC = () => {
   return (

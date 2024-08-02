@@ -1,4 +1,4 @@
-@import "../../../scss/common/";
+@import "@/scss/common/";
 
 .portfolio-card{
     display: flex;
@@ -51,8 +51,8 @@
         margin-bottom: 120px;
 
         &__period {
-            max-width: 222px;
-            margin: 0 0px 0 16px;
+            max-width: 180px;
+            margin: 0 42px 0 16px;
             line-height: map-get($line-height, 'main'); 
         }
     

@@ -2,8 +2,8 @@
 import { FC } from "react";
 import "./Footer.scss";
 
-import MenuIcons from "../MenuIcons/MenuIcons";
-import Button from "../Button/Button";
+import MenuIcons from "@/components/MenuIcons/MenuIcons";
+import Button from "@/components/Button/Button";
 
 const Footer: FC = () => {
   return (
@@ -14,8 +14,7 @@ const Footer: FC = () => {
       </div>
 
       <div className="footer__btn">
-        <Button />
-        {/* <a className="download-btn download-btn_no-fill">Резюме</a> */}
+        <Button isFill />
       </div>
     </footer>
   );

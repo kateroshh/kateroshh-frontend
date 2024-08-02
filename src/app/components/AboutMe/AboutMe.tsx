@@ -3,18 +3,15 @@ import { FC } from "react";
 import "./AboutMe.scss";
 
 import { useTranslations } from "next-intl";
+import Text from "@/components/Text/Text";
 
 const AboutMe: FC = () => {
-  const t = useTranslations("AboutMe");
-  console.log(t("p1"));
+  const text = useTranslations().raw("AboutMe");
 
   return (
-    <div className="about-me">
+    <div className="about-me" id="about">
       <h3 className="about-me__title title-p">Обо мне</h3>
-      <p className="about-me__text">{t("p1")}</p>
-      <p className="about-me__text">{t("p2")}</p>
-      <p className="about-me__text">{t("p3")}</p>
-      <p className="about-me__text">{t("p4")}</p>
+      <Text textArray={text} classNameText="about-me__text" />
     </div>
   );
 };

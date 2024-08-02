@@ -2,9 +2,9 @@
 import { FC } from "react";
 import "./BriefInfo.scss";
 
-import Menu from "../Menu/Menu";
-import MenuIcons from "../MenuIcons/MenuIcons";
-import Button from "../Button/Button";
+import Menu from "@/components/Menu/Menu";
+import MenuIcons from "@/components/MenuIcons/MenuIcons";
+import Button from "@/components/Button/Button";
 
 import { useTranslations } from "next-intl";
 

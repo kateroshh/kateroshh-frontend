@@ -1,15 +1,19 @@
 "use client";
 import { FC } from "react";
 import "./Chips.scss";
+import { TChips } from "@/types/types";
 
-const Chips: FC = () => {
+const Chips: FC<TChips> = ({ chips }) => {
   return (
-    <ul className="chips">
-      <li className="chips__item">Java Script</li>
-      <li className="chips__item">React</li>
-      <li className="chips__item">TypeScript</li>
-      <li className="chips__item">SCSS</li>
-    </ul>
+    chips && (
+      <ul className="chips">
+        {chips.map((item, index) => (
+          <li className="chips__item" key={index}>
+            {item}
+          </li>
+        ))}
+      </ul>
+    )
   );
 };
 
