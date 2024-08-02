@@ -26,6 +26,11 @@
       "I am ready to contribute to the creation of quality products for your clients and users :)"
     ],
 
+    "ProjectsPage": {
+      "title": "My projects",
+      "all": "View all projects"
+    },
+
     "Projects": 
       [
         {
@@ -53,6 +58,11 @@
           "main": false
         }
       ],
+
+      "PortfolioPage": {
+        "title": "Experience",
+        "all": "View full resume"
+      },
 
       "Portfolio": [
         {
