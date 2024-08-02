@@ -1,0 +1,22 @@
+%header-border {
+    content: '';
+    border-top: 2px solid;
+    display: inline-block;
+    width: 14px;
+    position: absolute;
+    top: 50%;
+}
+
+%menu-left-after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 40%;
+    height: 2px;
+}
+
+%menu-animation {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+}

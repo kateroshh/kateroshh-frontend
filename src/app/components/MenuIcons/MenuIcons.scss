@@ -1,0 +1,34 @@
+@import "@/scss/common/";
+
+.menu-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+
+    &__img {
+        fill: map-get($colors, 'grey-main');
+        width: 44px;
+        height: 44px;
+    }
+
+    &__img:hover {
+        fill: map-get($colors, 'main');
+    }
+}
+
+// Media breackpoints
+
+@include laptop {
+    .menu-icons {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@include mobile {
+    .menu-icons {
+        margin: 0;
+    }
+}

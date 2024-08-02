@@ -1,0 +1,146 @@
+@import "./common";
+
+body {
+    background-color: map-get($colors, 'bg-color');
+    height: 100%;
+}
+
+.hide-scroll {
+    overflow: hidden;
+}
+
+.page {
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: map-get($font-weights, 'regular');
+    min-height: 100vh;
+    min-width: map-get($content-with, 'sm');
+    font-size: map-get($font-sizes, 'medium');
+    color: map-get($colors, 'main');
+    line-height: map-get($line-height, 'main');    
+}
+
+.container {
+    max-width: map-get($content-with, 'xxl');
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.content {
+    max-width: calc(100% - 480px);
+    left: 500px;
+    float: left;
+    position: relative;
+}
+
+.title-p {
+    display: none;
+    font-weight: map-get($font-weights, 'medium');
+    font-size: map-get($font-sizes, 'subtitle-smale');
+    line-height: map-get($line-height, 'title-small'); 
+}
+
+.link-icon {
+    position: relative;
+    font-weight: map-get($font-weights, 'medium');
+    font-size: map-get($font-sizes, 'large');
+    line-height: map-get($line-height, 'text'); 
+    color: map-get($colors, 'main');
+    padding: 0 31px 0 0;
+
+    &::after {
+        content: '';
+        background: no-repeat url(../../public/img/arrow-up.svg);
+        background-size: cover;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 40%;
+        right: 0;
+    }
+
+    &:hover {
+        color: map-get($colors, 'accent');
+        @extend %menu-animation;
+    }
+
+    &:hover::after {
+        background: no-repeat url(../../public/img/arrow-up-hover.svg);
+        transform: translateX(5px) translateY(-5px);
+        @extend %menu-animation;
+    }
+}
+
+// Media breackpoints
+
+@include desktop-large {
+    .container {
+        max-width: map-get($content-with, 'xxxl');
+    }
+
+    .content {
+        max-width: calc(100% - 608px);
+        left: 604px;
+    }
+}
+
+@include laptop {
+    .container {
+        max-width: map-get($content-with, 'xl');
+        padding: 0 10px;
+    }
+
+    .content {
+        max-width: 100%;
+        left: 0;
+        float: none;
+    }
+
+    .title-p {
+        display: block;
+    }
+}
+
+@include tablet {
+    .container {
+        max-width: map-get($content-with, 'md');
+        padding: 0 20px;
+    }
+}
+
+@include mobile {
+    .page {
+        font-size: map-get($font-sizes, 'small');
+        line-height: map-get($line-height, 'text-mobil');  
+    }
+
+    .container {
+        max-width: map-get($content-with, 'sm');
+        padding: 0 10px;
+    }
+
+    .title-p {
+        font-size: map-get($font-sizes, 'title-small');
+        line-height: map-get($line-height, 'main'); 
+    }
+
+    .projects {
+        .project-card {
+            .link-icon {
+                &::after {
+                    background: none;
+                    width: 0;
+                    height: 0;
+                }
+
+                &:hover {
+                    color: map-get($colors, 'main');
+                }
+            }
+        }
+    }
+
+    .link-icon {
+        font-size: map-get($font-sizes, 'small');
+        line-height: map-get($line-height, 'title-large');  
+    }
+}

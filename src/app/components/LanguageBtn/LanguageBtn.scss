@@ -1,0 +1,48 @@
+@import "@/scss/common/";
+
+.header-lng {
+    display: flex;
+    color: map-get($colors, 'grey-main');
+    @extend %menu-animation;
+
+    &__item {
+        display: none;
+    }
+
+    &__label {
+        position: relative;
+        padding: 0 26px 0 0;
+        font-size: map-get($font-sizes, 'small');
+    }
+
+    &__label:last-child {
+        padding: 0 0 0 26px;
+    }
+
+    @include header-border(after);
+    @include header-border(before);
+
+    &__label:hover {
+        cursor: pointer;
+        color: map-get($colors, 'main');
+    }
+
+    &__label_active {
+        color: map-get($colors, 'main');
+    }
+
+    &__label_active:hover {
+        cursor: default;
+    }
+}
+
+@include tablet {
+    .header-lng {
+        display: none;
+
+        &_mobile {
+            display: flex;
+            z-index: 10;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+
+
+@mixin header-border($direction) {
+    &__label_#{$direction}::#{$direction} {
+        @extend %header-border;
+        @extend %menu-animation;
+
+        @if $direction == "after" {
+            border-radius: 2px 0 0 2px;
+            right: 0px;
+        } @else {
+            border-radius: 0 2px 2px 0;
+            left: 0px;
+        }
+    }
+
+    &__label_#{$direction}:hover::#{$direction} {
+        color: map-get($colors, 'main');
+    }
+}
+
+@mixin menu-left-after($is-hover) {
+    @extend %menu-left-after;
+
+    @if $is-hover == true {
+        width: 123px;
+        background-color: map-get($colors, 'main');
+    } @else {
+        width: 70px;
+        background-color: map-get($colors, 'grey-menu');
+    }
+}
+
+
+// Media breackpoints
+
+@mixin desktop-large() {
+    @media (min-width: map-get($breakpoint, 'xxxl')) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media (max-width: map-get($breakpoint, 'xxl')) {
+        @content;
+    }
+}
+
+@mixin laptop() {
+    @media (max-width: map-get($breakpoint, 'xl')) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media (max-width: map-get($breakpoint, 'md')) {
+        @content;
+    }
+}
+
+@mixin mobile() {
+    @media (max-width: map-get($breakpoint, 'sm')) {
+        @content;
+    }
+}
+

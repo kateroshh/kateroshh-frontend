@@ -18,9 +18,14 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/app/components/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/img/*": ["./public/img/*"],
+      "@/scss/*": ["./src/scss/*"],
+      "@/constants": ["./src/utils/constants.js"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/ScrollHighlightNav/ScrollHighlightNav.js"],
   "exclude": ["node_modules"]
 }

@@ -1,0 +1,69 @@
+@import "@/scss/common/";
+
+.download-btn {
+    position: relative;
+    background-color: map-get($colors, 'accent');
+    color: map-get($colors, 'black-main');
+    border-radius: 32px;
+    line-height: map-get($line-height, 'text'); 
+    padding: 12px 33px 12px 64px;
+    font-size: map-get($font-sizes, 'medium');
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 32px;
+        width: 24px;
+        height: 24px;
+        background: url(../../../../public/img/download-icon.svg) center no-repeat;
+    }
+    
+    &:hover {
+        cursor: pointer;
+        background-color: map-get($colors, 'hover-btn');
+        color: map-get($colors, 'main');
+    }
+    
+    &:hover::after  {
+        background: url(../../../../public/img/download-icon-hover.svg) center no-repeat;
+    }
+
+    &_no-fill {
+        background-color: map-get($colors, 'bg-color');
+        color: map-get($colors, 'accent');
+        border: 1px solid map-get($colors, 'accent');
+    }
+
+    &_no-fill::after {
+        background: url(../../../../public/img/download-icon-footer.svg) center no-repeat;
+    }
+}
+
+
+// Media breackpoints
+
+@include desktop-large {
+    .download-btn {
+        padding: 18px 33px 18px 64px;
+        font-size: map-get($font-sizes, 'large');
+    }
+}
+
+@include laptop {
+    .download-btn {
+        padding: 16px 31px 16px 63px;
+        font-size: map-get($font-sizes, 'large');
+    }
+}
+
+@include mobile {
+    .download-btn {
+        font-size: map-get($font-sizes, 'small');
+        line-height: map-get($line-height, 'text-mobil');
+        padding: 12px 40px 12px 40px;
+
+        &::after {
+            display: none;
+        }
+    }
+}

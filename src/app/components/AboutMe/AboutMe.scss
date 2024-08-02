@@ -1,0 +1,60 @@
+@import "@/scss/common/";
+
+.about-me {
+    margin-bottom: 100px;
+    padding: 0 12px 0 10px;
+
+    &__text {
+        font-size: map-get($font-sizes, 'large');
+        line-height: map-get($line-height, 'text'); 
+        margin-bottom: 17px;
+    }
+
+    &__text:last-child {
+        margin-bottom: 0;
+    }
+
+    &__title {
+        margin-bottom: 0;
+    }
+}
+
+// Media breackpoints
+
+@include desktop-large {
+    .about-me {
+        margin-bottom: 180px;
+    }
+}
+
+@include laptop {
+    .about-me {
+        padding: 0;
+        
+        &__text {
+            font-size: map-get($font-sizes, 'medium');
+            margin-bottom: 12px;
+            line-height: map-get($line-height, 'main'); 
+        }
+
+        &__title {
+            margin-bottom: 61px;
+        }
+    }
+}
+
+@include mobile {
+    .about-me {
+        margin-bottom: 88px;
+        
+        &__title {
+            margin-bottom: 40px;
+        }
+
+        &__text {
+            margin-bottom: 12px;
+            font-size: map-get($font-sizes, 'small');
+            line-height: map-get($line-height, 'text-mobil');  
+        }
+    }
+}
