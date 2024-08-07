@@ -3,11 +3,11 @@
       "title": "Привет мир!"
     },
 
-    "Menu": {
-      "about": "Обо мне",
-      "project": "Проекты",
-      "experience": "Опыт"
-    },
+    "Menu": [
+      { "id": 1, "title": "Обо мне", "tag": "about" },
+      { "id": 2, "title": "Проекты", "tag": "projects" },
+      { "id": 3, "title": "Опыт", "tag": "experience" }
+    ],
 
     "Button": {
       "download": "Резюме"

@@ -3,11 +3,11 @@
       "title": "Hello world!"
     },
 
-    "Menu": {
-      "about": "About",
-      "project": "Projects",
-      "experience": "Experience"
-    },
+    "Menu": [
+      { "id": 1, "title": "About", "tag": "about" },
+      { "id": 2, "title": "Projects", "tag": "projects" },
+      { "id": 3, "title": "Experience", "tag": "experience" }
+    ],
 
     "Button": {
       "download": "CV"
