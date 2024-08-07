@@ -23,6 +23,7 @@
       "@/types/*": ["./src/types/*"],
       "@/img/*": ["./public/img/*"],
       "@/scss/*": ["./src/scss/*"],
+      "@/utils": ["./src/utils/*"],
       "@/constants": ["./src/utils/constants.js"]
     }
   },

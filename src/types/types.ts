@@ -52,3 +52,9 @@ export type TTextArray = {
 export type TButton = {
   isFill?: boolean;
 };
+
+export type TMenuItem = {
+  id: string;
+  title: string;
+  tag: string;
+};

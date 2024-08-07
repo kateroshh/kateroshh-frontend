@@ -5,13 +5,13 @@ import { TPortfolioCard } from "@/types/types";
 
 import PortfolioCard from "@/components/PortfolioCard/PortfolioCard";
 import { useTranslations } from "next-intl";
-import { RESUME_NAME } from "@/constants";
+import { RESUME_NAME, MENU_IDS } from "@/constants";
 
 const Portfolio: FC = () => {
   const t = useTranslations();
 
   return (
-    <div className="portfolio" id="portfolio">
+    <div className="portfolio" id={MENU_IDS[2]}>
       <h3 className="portfolio__title title-p">
         {t.raw("PortfolioPage").title}
       </h3>
