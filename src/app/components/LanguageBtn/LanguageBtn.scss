@@ -34,6 +34,10 @@
     &__label_active:hover {
         cursor: default;
     }
+
+    &_projects {
+        margin-right: 44px;
+    }
 }
 
 @include tablet {

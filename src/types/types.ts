@@ -10,7 +10,7 @@ export type TProjectCard = {
   id: string;
   title: string;
   about: string;
-  chips?: string[];
+  chips?: TChips["chips"];
   link?: string;
   main: boolean;
 };
