@@ -13,6 +13,16 @@ export type TProjectCard = {
   chips?: TChips["chips"];
   link?: string;
   main: boolean;
+  year?: string;
+  company?: string;
+};
+
+export type TTableHeader = {
+  year: string;
+  project: string;
+  company: string;
+  tech: string;
+  link: string;
 };
 
 export type TProjectCards = TProjectCard[];
@@ -57,4 +67,9 @@ export type TMenuItem = {
   id: string;
   title: string;
   tag: string;
+};
+
+export type TSwitchTableCards = {
+  typeDisplays: string;
+  setTypeDisplays: (typeDisplays: string) => void;
 };

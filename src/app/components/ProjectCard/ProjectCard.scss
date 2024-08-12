@@ -8,22 +8,22 @@
         color: map-get($colors, 'main');
         padding: 20px;
         margin: -20px -20px;
-    }
 
-    &__link:hover {
-        background-color: map-get($colors, 'bgr-card');
-        border-radius: 28px;
-    }
-
-    &__link:hover .link-icon {
-        color: map-get($colors, 'accent');
-        @extend %menu-animation;
-    }
-
-    &__link:hover .link-icon::after {
-        background: no-repeat url(../../../../public/img/arrow-up-hover.svg);
-        transform: translateX(5px) translateY(-5px);
-        @extend %menu-animation;
+        &:hover {
+            background-color: map-get($colors, 'bgr-card');
+            border-radius: 28px;
+        }
+    
+        &:hover .link-icon {
+            color: map-get($colors, 'accent');
+            @extend %menu-animation;
+        }
+    
+        &:hover .link-icon::after {
+            background: no-repeat url(../../../../public/img/arrow-up-hover.svg);
+            transform: translateX(5px) translateY(-5px);
+            @extend %menu-animation;
+        }
     }
 
     &__img {

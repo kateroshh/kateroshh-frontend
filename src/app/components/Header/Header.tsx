@@ -13,7 +13,7 @@ const Header: FC = () => {
   const isProjectsUrl = url.includes("projects");
 
   return (
-    <header className="header">
+    <header className={`header ${isProjectsUrl ? "header_projects" : ""}`}>
       <div className="container">
         <div className="header__container">
           <Logo />
@@ -26,7 +26,7 @@ const Header: FC = () => {
             <LanguageBtn />
           )}
 
-          <MobileMenu />
+          {!isProjectsUrl && <MobileMenu />}
         </div>
       </div>
     </header>

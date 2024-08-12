@@ -1,0 +1,46 @@
+@import "@/scss/common/";
+
+.btns {
+    margin-top: 5px;
+
+    &__item {
+        width: 24px;
+        height: 24px;
+        margin-right: 36px;
+
+        &:last-child {
+            margin-right: 10px;   
+        }
+
+        &_active > .btns__img {
+            fill: map-get($colors, 'accent');
+        }
+    }
+
+    &__img {
+        width: 24px;
+        height: 24px;
+        fill: map-get($colors, 'main');
+    }
+
+    &__img:hover {
+        cursor: pointer;
+        fill: map-get($colors, 'accent');
+    }
+}
+
+@include mobile {
+    .btns {
+        margin-top: 0;
+        align-self: end;
+        margin-bottom: -5px;
+
+        &__item {
+            margin-right: 24px;
+
+            &:last-child {
+                margin-right: 13px;
+            }
+        }
+    }
+}

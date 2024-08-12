@@ -28,7 +28,8 @@
 
     "ProjectsPage": {
       "title": "My projects",
-      "all": "View all projects"
+      "all": "View all projects",
+      "backPage": "Home"
     },
 
     "Projects": 
@@ -39,7 +40,9 @@
           "about": "Project for HRSpace (hrspace.hh.ru) Microservice for an application builder for searching for recruiters. The goals of the service: to give customers the opportunity to place an application for selection under three payment models. Recruiters - to respond and correspond with clients within the internal chat, send a resume and register a released employee (date of release and completion of the probationary period).",
           "chips": ["Java Script", "React", "TypeScript", "SCSS"],
           "link": "#111",
-          "main": true
+          "main": true,
+          "year": "2023",
+          "company": "HRspace & Мастерская Яндекс практикум"
         },
         {
           "id": "2",
@@ -47,7 +50,9 @@
           "about": "2 Project for HRSpace (hrspace.hh.ru) Microservice for an application builder for searching for recruiters. The goals of the service: to give customers the opportunity to place an application for selection under three payment models. Recruiters - to respond and correspond with clients within the internal chat, send a resume and register a released employee (date of release and completion of the probationary period).",
           "chips": [],
           "link": "#",
-          "main": false
+          "main": false,
+          "year": "2023",
+          "company": "HRspace & Мастерская Яндекс практикум"
         },
         {
           "id": "3",
@@ -55,7 +60,9 @@
           "about": "3 Project for HRSpace (hrspace.hh.ru) Microservice for an application builder for searching for recruiters. The goals of the service: to give customers the opportunity to place an application for selection under three payment models. Recruiters - to respond and correspond with clients within the internal chat, send a resume and register a released employee (date of release and completion of the probationary period).",
           "chips": [],
           "link": "#",
-          "main": false
+          "main": false,
+          "year": "2023",
+          "company": "HRspace & Мастерская Яндекс практикум"
         }
       ],
 
@@ -109,6 +116,14 @@
           ],
           "main": true
         }
-      ]
+      ],
+
+      "TableProjects": {
+        "year": "Year",
+        "project": "Project",
+        "company": "Company",
+        "tech": "Technologies",
+        "link": "Link"
+      }
 
 }

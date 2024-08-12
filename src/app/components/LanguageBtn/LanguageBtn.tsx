@@ -18,7 +18,7 @@ const LanguageBtn: FC<MobileProps> = ({ isMobile }) => {
 
   const onSelectChange = (e: ChangeEvent<HTMLInputElement>) => {
     const nextLocale = e.target.value;
-    router.replace(`/${nextLocale}`);
+    router.replace(`/${nextLocale}${url.substring(3)}`);
   };
 
   return (

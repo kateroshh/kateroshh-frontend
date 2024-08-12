@@ -24,6 +24,10 @@
     .header {
         padding-top: 34px;
         margin: 0 0 115px 0;
+
+        &_projects {
+            margin: 0 0 93px 0;
+        }
     }
 }
 
@@ -31,6 +35,10 @@
     .header {
         margin: 0 0 77px 0;
         padding-top: 34px;
+
+        &_projects {
+            margin: 0 0 55px 0;
+        }
     }
 }
 
@@ -38,5 +46,9 @@
     .header {
         padding-top: 14px;
         margin: 0 0 54px 0;
+
+        &_projects {
+            margin: 0 0 44px 0;
+        }
     }
 }
