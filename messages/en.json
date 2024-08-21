@@ -29,7 +29,10 @@
     "ProjectsPage": {
       "title": "My projects",
       "all": "View all projects",
-      "backPage": "Home"
+      "backPage": "Home",
+      "projectTitle": "The project",
+      "linkProject": "Link to demo", 
+      "techProject": "Technologies"
     },
 
     "Projects": 
@@ -42,7 +45,18 @@
           "link": "#111",
           "main": true,
           "year": "2023",
-          "company": "HRspace & Мастерская Яндекс практикум"
+          "company": "HRspace & Мастерская Яндекс практикум",
+          "srcIcon": "/img/projects/1/HRspace.jpg",
+          "details": [
+            {
+              "title": "Architecture",
+              "src": ["/img/projects/1/1.jpg"]
+            },
+            {
+              "title": "Demo",
+              "src": ["/img/projects/1/1.jpg", "/img/projects/1/1.jpg"]
+            }
+          ]
         },
         {
           "id": "2",
@@ -52,7 +66,14 @@
           "link": "#",
           "main": false,
           "year": "2023",
-          "company": "HRspace & Мастерская Яндекс практикум"
+          "company": "HRspace & Мастерская Яндекс практикум",
+          "srcIcon": "/img/projects/1/HRspace.jpg",
+          "details": [
+            {
+              "title": "Demo",
+              "src": ["/img/projects/1/1.jpg"]
+            }
+          ]
         },
         {
           "id": "3",
@@ -62,7 +83,8 @@
           "link": "#",
           "main": false,
           "year": "2023",
-          "company": "HRspace & Мастерская Яндекс практикум"
+          "company": "HRspace & Мастерская Яндекс практикум",
+          "srcIcon": "/img/projects/1/HRspace.jpg"
         }
       ],
 
@@ -124,6 +146,12 @@
         "company": "Company",
         "tech": "Technologies",
         "link": "Link"
+      },
+
+      "ErrorPage": {
+        "head": "404",
+        "title": "Page not found",
+        "link": "Return to home page"
       }
 
 }

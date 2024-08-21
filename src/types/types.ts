@@ -6,6 +6,12 @@ export type TChips = {
   chips?: string[];
 };
 
+export type TProjectDetails = {
+  title: string;
+  src: string | string[];
+  setImgSrc: (imgSrc: string) => void;
+};
+
 export type TProjectCard = {
   id: string;
   title: string;
@@ -15,6 +21,13 @@ export type TProjectCard = {
   main: boolean;
   year?: string;
   company?: string;
+  srcIcon?: string;
+  details?: TProjectDetails[];
+};
+
+export type TPopup = {
+  src: string;
+  close: (imgSrc: string) => void;
 };
 
 export type TTableHeader = {
@@ -70,6 +83,7 @@ export type TMenuItem = {
 };
 
 export type TSwitchTableCards = {
-  typeDisplays: string;
-  setTypeDisplays: (typeDisplays: string) => void;
+  typeDisplays?: string;
+  setTypeDisplays?: (typeDisplays: string) => void;
+  title?: string;
 };

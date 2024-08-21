@@ -29,7 +29,10 @@
     "ProjectsPage": {
       "title": "Мои проекты",
       "all": "Посмотреть все проекты",
-      "backPage": "Главная"
+      "backPage": "Главная",
+      "projectTitle": "Проект",
+      "linkProject": "Ссылка на демо", 
+      "techProject": "Технологии"
     },
 
     "Projects": 
@@ -39,10 +42,21 @@
           "title": "Микросервис билдера заявки – HRSpace",
           "about": "Проект для HRSpace (hrspace.hh.ru) «Микросервис билдера заявки для поиска рекрутеров».  Цели сервиса: дать заказчикам возможность размещать заявку на подбор по трем моделям оплаты. Рекрутерам – откликаться и вести переписку с клиентами в рамках внутреннего чата, направлять резюме и регистрировать вышедшего сотрудника (дата выхода и прохождение испытательного срока).",
           "chips": ["Java Script", "React", "TypeScript", "SCSS"],
-          "link": "#222",
+          "link": "#111",
           "main": true,
           "year": "2023",
-          "company": "HRspace & Мастерская Яндекс практикум"
+          "company": "HRspace & Мастерская Яндекс практикум",
+          "srcIcon": "/img/projects/1/HRspace.jpg",
+          "details": [
+            {
+              "title": "Архитектура",
+              "src": ["/img/projects/1/1.jpg"]
+            },
+            {
+              "title": "Архитектура 2",
+              "src": ["/img/projects/1/1.jpg", "/img/projects/1/HRspace.jpg"]
+            }
+          ]
         },
         {
           "id": "2",
@@ -52,7 +66,14 @@
           "link": "#",
           "main": false,
           "year": "2023",
-          "company": "HRspace & Мастерская Яндекс практикум"
+          "company": "HRspace & Мастерская Яндекс практикум",
+          "srcIcon": "/img/projects/1/HRspace.jpg",
+          "details": [
+            {
+              "title": "Демо",
+              "src": ["/img/projects/1/1.jpg"]
+            }
+          ]
         },
         {
           "id": "3",
@@ -62,7 +83,8 @@
           "link": "#",
           "main": false,
           "year": "2023",
-          "company": "HRspace & Мастерская Яндекс практикум"
+          "company": "HRspace & Мастерская Яндекс практикум",
+          "srcIcon": "/img/projects/1/HRspace.jpg"
         }
       ],
 
@@ -124,6 +146,12 @@
         "company": "Организация",
         "tech": "Технологии",
         "link": "Ссылка"
+      },
+
+      "ErrorPage": {
+        "head": "Ошибка",
+        "title": "Страница не найдена",
+        "link": "Вернуться на главную"
       }
 
 }

@@ -3,6 +3,7 @@ import { FC } from "react";
 import "./CardProjects.scss";
 import { TProjectCard } from "@/types/types";
 
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 type TCardProjects = {
@@ -14,16 +15,16 @@ const CardProjects: FC<TCardProjects> = ({ projects }) => {
 
   return (
     <ul className="cards">
-      {projects.map((item: TProjectCard) => (
-        <li key={item.id} className="card">
-          <a className="card__content" href="#">
-            <h2 className="card__title">{item.title}</h2>
-            <p className="card__company">{item.company}</p>
-            <p className="card__about">{item.about}</p>
-          </a>
-          <a className="card__link link-icon" href={item.link}>
+      {projects.map(({ id, title, company, about }: TProjectCard) => (
+        <li key={id} className="card">
+          <Link className="card__content" href={`projects/${id}`}>
+            <h2 className="card__title">{title}</h2>
+            <p className="card__company">{company}</p>
+            <p className="card__about">{about}</p>
+          </Link>
+          <Link className="card__link link-icon" href={`projects/${id}`}>
             {t("link")}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>

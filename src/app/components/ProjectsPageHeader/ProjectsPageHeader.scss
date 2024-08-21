@@ -23,6 +23,7 @@
         }
 
         &:hover {
+            cursor: pointer;
             color: map-get($colors, 'accent');
 
             &::after {
@@ -36,6 +37,9 @@
         font-size: map-get($font-sizes, 'title-large');
         line-height: map-get($line-height, 'title-medium');
         font-weight: map-get($font-weights, 'bold');
+        max-height: 46px;
+        height: 100%;
+        overflow: hidden;
     }
 }
 
@@ -47,6 +51,7 @@
             margin: 21px 0 0 0;
             font-size: map-get($font-sizes, 'subtitle-smale');
             line-height: map-get($line-height, 'title-small');
+            max-height: 36px;
         }
     }
 }
@@ -54,6 +59,10 @@
 @include tablet {
     .header-projects {
         margin-bottom: 40px;
+
+        &__text {
+            max-height: 64px;
+        }
     }
 }
 
@@ -68,6 +77,7 @@
         &__text {
             margin: 13px 0 0 0;
             font-size: map-get($font-sizes, 'title-small');
+            max-height: 55px;
         }
     }
 }
