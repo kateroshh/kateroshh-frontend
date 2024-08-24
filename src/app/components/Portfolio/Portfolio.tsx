@@ -4,11 +4,12 @@ import "./Portfolio.scss";
 import { TPortfolioCard } from "@/types/types";
 
 import PortfolioCard from "@/components/PortfolioCard/PortfolioCard";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { RESUME_NAME, MENU_IDS } from "@/constants";
 
 const Portfolio: FC = () => {
   const t = useTranslations();
+  const localActive = useLocale();
 
   return (
     <div className="portfolio" id={MENU_IDS[2]}>
@@ -24,8 +25,8 @@ const Portfolio: FC = () => {
       </ul>
       <a
         className="portfolio__all link-icon"
-        href={`\${RESUME_NAME}`}
-        download={RESUME_NAME}
+        href={`${localActive}_${RESUME_NAME}`}
+        download={`${localActive}_${RESUME_NAME}`}
         target="_blank"
       >
         {t.raw("PortfolioPage").all}

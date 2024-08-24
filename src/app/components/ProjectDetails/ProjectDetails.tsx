@@ -1,7 +1,7 @@
 "use client";
 import { FC, useState } from "react";
 import "./ProjectDetails.scss";
-import { TProjectCard } from "@/types/types";
+import { TProjectCard, TProjectDetails } from "@/types/types";
 
 import { useTranslations } from "next-intl";
 
@@ -15,7 +15,8 @@ type TProps = {
 };
 
 const ProjectDetails: FC<TProps> = ({ project }) => {
-  const [imgSrc, setImgSrc] = useState("");
+  const [indexSrc, setIndexSrc] = useState<number | null>(null);
+  const [arrayImgs, setArrayImgs] = useState<string[]>([]);
 
   const t = useTranslations("ProjectsPage");
 
@@ -50,11 +51,14 @@ const ProjectDetails: FC<TProps> = ({ project }) => {
               key={index}
               src={src}
               title={title}
-              setImgSrc={setImgSrc}
+              setIndexSrc={setIndexSrc}
+              setArrayImgs={setArrayImgs}
             />
           ))}
       </div>
-      {imgSrc && <Popup src={imgSrc} close={setImgSrc} />}
+      {(indexSrc || indexSrc === 0) && (
+        <Popup index={indexSrc} close={setIndexSrc} arrayImgs={arrayImgs} />
+      )}
     </div>
   );
 };

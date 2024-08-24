@@ -50,9 +50,6 @@
                 transform: rotate(-40deg) translate(0, -50%);
             }
         }
-
-        
-    
     }
 
     &__img {
@@ -61,10 +58,93 @@
         left: 50%;
         transform: translate(-50%, -50%);
         display: block;
-        max-width: 95%;
+        max-width: 90%;
+        max-height: 90%;
         width: 100%;
-        max-height: 95%;
+        object-fit: fill;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        z-index: 100;
+        cursor: pointer;
+        max-width: 20px;
+        max-height: 52px;
+        width: 100%;
         height: 100%;
-        object-fit: contain;
+        border: 24px solid transparent;
+
+        &_back {
+            border-left-color: map-get($colors, 'main');
+            border-right: 0;
+            right: 20px;
+        }
+
+        &_forward {
+            border-right-color: map-get($colors, 'main');
+            border-left: 0;
+            left: 20px;
+        }
+    }
+
+    &:hover {
+        border-right-color: map-get($colors, 'accent');
+    }
+}
+
+@include desktop-large {
+    .popup {
+        &__btn {
+            max-height: 80px;
+            border-width: 40px;
+        }
+        
+        &__img {
+            max-height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+@include laptop {
+    .popup {
+        &__btn {
+            &_back {
+                right: 5px;
+            }
+    
+            &_forward {
+                left: 5px;
+            }
+        }
+    }
+}
+
+@include tablet {
+    .popup {
+        &__btn {
+            max-height: 52px;
+            border-width: 24px;
+        }
+    }
+}
+
+@include mobile {
+    .popup {
+        &__btn {
+            top: 48%;
+            max-height: 30px;
+            max-width: 10px;
+            border-width: 14px;
+
+            &_back {
+                right: 2px;
+            }
+    
+            &_forward {
+                left: 2px;
+            }
+        }
     }
 }

@@ -3,6 +3,8 @@
 .chips {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
 
     .chips__item {
         max-width: 100px;
@@ -23,23 +25,3 @@
         }
     }
 }
-
-@include desktop {
-    .chips {
-
-        &_projects {
-            flex-wrap: wrap;
-            row-gap: 10px;
-        }
-    }
-}
-
-// @include laptop {
-//     .chips {
-
-//         &_projects {
-//             flex-wrap: wrap;
-//             row-gap: 10px;
-//         }
-//     }
-// }

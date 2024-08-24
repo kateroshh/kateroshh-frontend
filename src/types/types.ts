@@ -8,8 +8,9 @@ export type TChips = {
 
 export type TProjectDetails = {
   title: string;
-  src: string | string[];
-  setImgSrc: (imgSrc: string) => void;
+  src: string[];
+  setIndexSrc: (indexSrc: number | null) => void;
+  setArrayImgs: (arrayImgs: string[]) => void;
 };
 
 export type TProjectCard = {
@@ -26,8 +27,9 @@ export type TProjectCard = {
 };
 
 export type TPopup = {
-  src: string;
-  close: (imgSrc: string) => void;
+  index: number;
+  close: (indexSrc: number | null) => void;
+  arrayImgs: string[];
 };
 
 export type TTableHeader = {

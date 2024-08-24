@@ -5,33 +5,32 @@ import { TProjectDetails } from "@/types/types";
 
 import Image from "next/image";
 
-const ProjectImages: FC<TProjectDetails> = ({ src, title, setImgSrc }) => {
+const ProjectImages: FC<TProjectDetails> = ({
+  src,
+  title,
+  setIndexSrc,
+  setArrayImgs,
+}) => {
+  const handleClickImage = (index: number, arrayImgs: string[]) => {
+    setArrayImgs(arrayImgs);
+    setIndexSrc(index);
+  };
+
   return (
     <>
       <h2 className="details__title">{title}</h2>
       <div className="details__imgs">
-        {Array.isArray(src) ? (
-          src.map((item, index) => (
-            <Image
-              key={index}
-              width={300}
-              height={150}
-              className="details__img"
-              src={item}
-              alt={title}
-              onClick={() => setImgSrc(item)}
-            />
-          ))
-        ) : (
+        {src.map((item, index) => (
           <Image
+            key={index}
             width={300}
             height={150}
             className="details__img"
-            src={src}
+            src={item}
             alt={title}
-            onClick={() => setImgSrc(src)}
+            onClick={() => handleClickImage(index, src)}
           />
-        )}
+        ))}
       </div>
     </>
   );
