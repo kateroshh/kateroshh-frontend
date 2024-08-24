@@ -10,7 +10,7 @@ import ProjectsPageHeader from "@/components/ProjectsPageHeader/ProjectsPageHead
 import { useTranslations } from "next-intl";
 
 const ProjectsPage: FC = () => {
-  const [typeDisplays, setTypeDisplays] = useState("cards");
+  const [typeDisplays, setTypeDisplays] = useState<string>("table");
   const isTable = typeDisplays === "table" ? true : false;
 
   const t = useTranslations();
