@@ -27,9 +27,11 @@ My portfolio site kateroshh.ru
 
 ## Done ✅
 
-- Created Blank template Next.js
-- Configured prettier and eslint
+- The first version of the site data is taken from json-file
+- Uploaded to server kateroshh.ru
+- Pages created: main (/), projects, projects/[id]
 
 ## To do 📝
 
-- [ ] Create site components
+- [ ] The second version of the site data is taken from api
+- [ ] Redesign the way images are viewed on the page projects/[id]
