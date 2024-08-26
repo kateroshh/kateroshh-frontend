@@ -1,7 +1,7 @@
 "use client";
 import { FC, useState } from "react";
 import "./ProjectDetails.scss";
-import { TProjectCard, TProjectDetails } from "@/types/types";
+import { TProjectCard } from "@/types/types";
 
 import { useTranslations } from "next-intl";
 

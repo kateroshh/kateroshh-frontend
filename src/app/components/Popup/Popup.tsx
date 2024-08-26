@@ -37,8 +37,8 @@ const Popup: FC<TPopup> = ({ index, close, arrayImgs }) => {
         ></button>
       )}
       <Image
-        width={300}
-        height={150}
+        width={1500}
+        height={800}
         className="popup__img"
         src={arrayImgs[indexImg]}
         alt="show img"
