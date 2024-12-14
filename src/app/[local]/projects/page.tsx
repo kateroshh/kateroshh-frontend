@@ -1,15 +1,40 @@
 "use client";
-import { FC } from "react";
+import { FC, useState } from "react";
+import "@/scss/index.scss";
+
 import Head from "next/head";
+import TableProjects from "@/components/TableProjects/TableProjects";
+import CardsProjects from "@/components/CardProjects/CardProjects";
+import ProjectsPageHeader from "@/components/ProjectsPageHeader/ProjectsPageHeader";
+
+import { useTranslations } from "next-intl";
 
 const ProjectsPage: FC = () => {
+  const [typeDisplays, setTypeDisplays] = useState<string>("table");
+  const isTable = typeDisplays === "table" ? true : false;
+
+  const t = useTranslations();
+
   return (
-    <div className="page">
+    <>
       <Head>
-        <title>Проекты</title>
+        <title>{t.raw("ProjectsPage").title}</title>
       </Head>
-      hhhh
-    </div>
+
+      <ProjectsPageHeader
+        typeDisplays={typeDisplays}
+        setTypeDisplays={setTypeDisplays}
+      />
+
+      {isTable ? (
+        <TableProjects
+          projects={t.raw("Projects")}
+          tableTitle={t.raw("TableProjects")}
+        />
+      ) : (
+        <CardsProjects projects={t.raw("Projects")} />
+      )}
+    </>
   );
 };
 

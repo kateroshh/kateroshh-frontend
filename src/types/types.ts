@@ -6,13 +6,38 @@ export type TChips = {
   chips?: string[];
 };
 
+export type TProjectDetails = {
+  title: string;
+  src: string[];
+  setIndexSrc: (indexSrc: number | null) => void;
+  setArrayImgs: (arrayImgs: string[]) => void;
+};
+
 export type TProjectCard = {
   id: string;
   title: string;
   about: string;
-  chips?: string[];
+  chips?: TChips["chips"];
   link?: string;
   main: boolean;
+  year?: string;
+  company?: string;
+  srcIcon?: string;
+  details?: TProjectDetails[];
+};
+
+export type TPopup = {
+  index: number;
+  close: (indexSrc: number | null) => void;
+  arrayImgs: string[];
+};
+
+export type TTableHeader = {
+  year: string;
+  project: string;
+  company: string;
+  tech: string;
+  link: string;
 };
 
 export type TProjectCards = TProjectCard[];
@@ -57,4 +82,10 @@ export type TMenuItem = {
   id: string;
   title: string;
   tag: string;
+};
+
+export type TSwitchTableCards = {
+  typeDisplays?: string;
+  setTypeDisplays?: (typeDisplays: string) => void;
+  title?: string;
 };

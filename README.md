@@ -4,7 +4,7 @@
 
 ## About the project 🚀
 
-My portfolio site kateroshh.ru
+The portfolio site kateroshh.ru was created to display information about the frontend developer, display the main projects with their description and the CV (recruiter can download the CV file). The site allows you to switch between Russian and English (this is implemented with the help of Next.js Internationalization, in the first version the data is taken from json files).
 
 <!-- LINKS -->
 
@@ -27,9 +27,11 @@ My portfolio site kateroshh.ru
 
 ## Done ✅
 
-- Created Blank template Next.js
-- Configured prettier and eslint
+- The first version of the site data is taken from json-file
+- Uploaded to server kateroshh.ru
+- Pages created: main (/), projects, projects/[id]
 
 ## To do 📝
 
-- [ ] Create site components
+- [ ] The second version of the site data is taken from api
+- [ ] Redesign the way images are viewed on the page projects/[id]

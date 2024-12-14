@@ -1,7 +1,10 @@
 "use client";
 import { FC, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Head from "next/head";
+import "@/scss/index.scss";
+
+import Image from "next/image";
+import Img404 from "@/img/404.png";
 
 const NotFound: FC = () => {
   const router = useRouter();
@@ -15,12 +18,23 @@ const NotFound: FC = () => {
   return (
     <html>
       <body>
-        <div className="not">
-          <Head>
-            <title>Ошибка</title>
-          </Head>
-          <h1>Ошибка</h1>
-        </div>
+        <main className="main">
+          <div className="container">
+            <div className="not-found">
+              {/* <h1 className="not-found__title">Error 404</h1> */}
+              <Image
+                width={490}
+                height={398}
+                className="not-found__img"
+                src={Img404}
+                alt="404 not found"
+              />
+              <a className="not-found__link" href="/">
+                Home
+              </a>
+            </div>
+          </div>
+        </main>
       </body>
     </html>
   );

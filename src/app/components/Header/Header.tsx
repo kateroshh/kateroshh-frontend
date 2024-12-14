@@ -1,19 +1,32 @@
 "use client";
 import { FC } from "react";
 import "./Header.scss";
+import { usePathname } from "next/navigation";
 
 import Logo from "@/components/Logo/Logo";
 import LanguageBtn from "@/components/LanguageBtn/LanguageBtn";
 import MobileMenu from "@/components/MobileMenu/MobileMenu";
+import Button from "@/components/Button/Button";
 
 const Header: FC = () => {
+  const url = usePathname();
+  const isProjectsUrl = url.includes("projects");
+
   return (
-    <header className="header">
+    <header className={`header ${isProjectsUrl ? "header_projects" : ""}`}>
       <div className="container">
         <div className="header__container">
           <Logo />
-          <LanguageBtn />
-          <MobileMenu />
+          {isProjectsUrl ? (
+            <div className="header__projects">
+              <LanguageBtn />
+              <Button />
+            </div>
+          ) : (
+            <LanguageBtn />
+          )}
+
+          {!isProjectsUrl && <MobileMenu />}
         </div>
       </div>
     </header>

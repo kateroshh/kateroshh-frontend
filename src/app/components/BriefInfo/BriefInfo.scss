@@ -44,24 +44,11 @@
 @include desktop-large {
     .brief-info {
         max-width: 500px;
-        top: 180px;
+        top: 120px;
 
-        &__title {
-            margin-bottom: 24px;
-        }
-        
-        &__subtitle {
-            margin-bottom: 40px;
-        }
-        
         &__text {
-            margin-bottom: 78px;
             font-size: map-get($font-sizes, 'medium');
             max-width: 402px;
-        }
-
-        &__btn {
-            margin-bottom: 76px;
         }
     }
 

@@ -1,0 +1,83 @@
+@import "@/scss/common/";
+
+.header-projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 59px;
+
+    &__link {
+        position: relative;
+        padding-left: 32px;
+        color: map-get($colors, 'main');
+        font-size: map-get($font-sizes, 'large');
+        line-height: map-get($line-height, 'text');
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background: url(../../../../public/img/arrow-left.svg) center no-repeat;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: map-get($colors, 'accent');
+
+            &::after {
+                background: url(../../../../public/img/arrow-left-hover.svg) center no-repeat;
+            }
+        }
+    }
+
+    &__text {
+        margin: 21px 0 0 0;
+        font-size: map-get($font-sizes, 'title-large');
+        line-height: map-get($line-height, 'title-medium');
+        font-weight: map-get($font-weights, 'bold');
+        max-height: 46px;
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+@include laptop {
+    .header-projects {
+        margin-bottom: 66px;
+
+        &__text {
+            margin: 21px 0 0 0;
+            font-size: map-get($font-sizes, 'subtitle-smale');
+            line-height: map-get($line-height, 'title-small');
+            max-height: 36px;
+        }
+    }
+}
+
+@include tablet {
+    .header-projects {
+        margin-bottom: 40px;
+
+        &__text {
+            max-height: 64px;
+        }
+    }
+}
+
+@include mobile {
+    .header-projects {
+        margin-bottom: 33px;
+
+        &__link {
+            font-size: map-get($font-sizes, 'small');
+        }
+
+        &__text {
+            margin: 13px 0 0 0;
+            font-size: map-get($font-sizes, 'title-small');
+            max-height: 55px;
+        }
+    }
+}

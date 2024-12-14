@@ -1,0 +1,175 @@
+@import "@/scss/common/";
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 104px 0 0 0;
+    padding-bottom: 100px;
+}
+
+.card {
+    border-radius: 20px;
+    padding-bottom: 40px;
+    background: map-get($colors, 'bgr-card');
+    
+    &__content {
+        display: block;
+        max-width: 350px;
+        width: 100%;
+        color: map-get($colors, 'main');
+        background: map-get($colors, 'grey-menu');
+        border-radius: 20px;
+        padding: 29px 20px;
+    }
+
+    &__title {
+        font-size: map-get($font-sizes, 'title-small');
+        line-height: map-get($line-height, 'title-large');
+        margin-bottom: 29px;
+        height: 79px;
+        overflow: hidden;
+    }
+
+    &__company {
+        font-size: map-get($font-sizes, 'small');
+        margin-bottom: 40px;
+        max-height: 24px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &__about {
+        font-size: map-get($font-sizes, 'medium');
+        line-height: map-get($line-height, 'main');
+        max-height: 76px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &__link {
+        color: map-get($colors, 'main');
+        font-weight: map-get($font-weights, 'regular');
+        position: relative;
+        padding-right: 35px;
+        text-align: right;
+        display: block;
+        margin: 24px 34px 0 0;
+        
+
+        &::after {
+            right: 9px;
+            top: 9px;
+        }
+    }
+
+    &:hover .link-icon {
+        color: map-get($colors, 'accent');
+        @extend %menu-animation;
+    }
+    
+    &:hover .link-icon::after {
+        background: no-repeat url(../../../../public/img/arrow-up-hover.svg);
+        transform: translateX(5px) translateY(-5px);
+        @extend %menu-animation;
+    }
+}
+
+
+// Media breackpoints
+
+@include desktop-large {
+    .card {
+        &__content {
+            max-width: 437px;
+        }
+    }
+}
+
+
+@include laptop {
+    .cards {
+        margin: 89px 0 100px 0;
+    }
+
+    .card {
+        &__content {
+            max-width: 422px;
+            padding: 26px 34px;
+        }
+    }
+}
+
+@include tablet {
+    .card {
+        padding-bottom: 0;
+        
+        &__content {
+            max-width: 100%;
+            background: map-get($colors, 'bgr-card');
+        }
+
+        &__link {
+            display: none;
+        }
+
+        &__title {
+            position: relative;
+            font-size: map-get($font-sizes, 'large');
+
+            &::after {
+                content: '';
+                background: no-repeat url(../../../../public/img/arrow-up.svg);
+                background-size: cover;
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                top: 40%;
+                right: 0;
+            }
+
+            &:hover {
+                color: map-get($colors, 'accent');
+            }
+        
+            &:hover::after {
+                background: no-repeat url(../../../../public/img/arrow-up-hover.svg);
+            }
+        }
+    }
+}
+
+@include mobile {
+    .cards {
+        padding: 0;
+        margin: 66px 0 40px 0;
+    }
+
+    .card {
+        padding-bottom: 40px;
+
+        &__content {
+            padding: 19px 33px;
+        }
+
+        &__title {
+            line-height: map-get($line-height, 'title-medium');
+            margin-bottom: 18px;
+            max-height: 49px;
+        }
+
+        &__company {
+            font-size: map-get($font-sizes, 'text-brief');
+            max-height: 20px;
+            margin-bottom: 31px;
+        }
+    
+        &__about {
+            font-size: map-get($font-sizes, 'small');
+            max-height: 62px;
+        }
+
+    }
+}
